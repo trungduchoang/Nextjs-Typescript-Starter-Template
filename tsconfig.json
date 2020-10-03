@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "baseUrl": "./",
+    "paths": {
+      "~types/*": ["./@types/*"],
+      "~graphql/*": ["./graphql/*"],
+      "~graphqlQ/*": ["./graphql/queries/*"],
+      "~graphqlM/*": ["./graphql/mutations/*"],
+      "~views/*": ["./views/*"],
+      "~viewsUi/*": ["./views/ui/*"],
+      "~viewsComp/*": ["./views/components/*"],
+      "~viewsLay/*": ["./views/layouts/*"],
+      "~styles/*": ["./styles/*"],
+      "~server/*": ["./server/*"],
+      "~lib/*": ["./lib/*"],
+      "~assets/*": ["./assets/*"],
+      "~static/*": ["./public/static/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

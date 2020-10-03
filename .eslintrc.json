@@ -1,0 +1,55 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "prettier",
+    "graphql",
+    "better-styled-components"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-var": "warn",
+    "no-console": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true
+      }
+    ],
+    "graphql/template-strings": [
+      "error",
+      {
+        "env": "literal"
+      }
+    ],
+    "better-styled-components/sort-declarations-alphabetically": 2
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
