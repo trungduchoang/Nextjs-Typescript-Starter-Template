@@ -1,14 +1,10 @@
 require('dotenv').config()
-// if you want to use nextRoutes
-// const routes = require('~server/core/nextRoutes')
 
 import express from 'express'
 import next from 'next'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import compression from 'compression'
-
-import apollo from '~server/core/apollo'
 
 const { PORT = '3000', NODE_ENV } = process.env
 const port = parseInt(PORT, 10) || 3000
@@ -32,9 +28,6 @@ nextApp.prepare().then(() => {
     morgan(':method :url :status :res[content-length] - :response-time ms')
   )
   server.use(compression())
-
-  //start apollo server
-  apollo.applyMiddleware({ app: server })
 
   server.get('*', (req, res) => handle(req, res))
   // express().use(handler).listen(3000) //routes handle way
