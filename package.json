@@ -13,9 +13,9 @@
   ],
   "main": "server/index.ts",
   "scripts": {
-    "dev": "nodemon",
+    "start": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json -r tsconfig-paths/register dist",
+    "start:production": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json -r tsconfig-paths/register dist",
     "test": "jest",
     "test:unit": "jest --config tests/jest.unit.config.js",
     "test:integration": "jest --config tests/jest.integration.config.js",
