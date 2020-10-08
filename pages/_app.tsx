@@ -1,12 +1,12 @@
-import App from 'next/app'
-import '~styles/main.scss'
+import App from "next/app";
+import "@/styles/main.scss";
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
 
-    return <Component {...pageProps} />
+    return <Component {...pageProps} />;
   }
 }
 
-export default MyApp
+export default MyApp;

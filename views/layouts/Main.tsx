@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-
 import Footer from '~views/components/Footer'
 
-interface IProps {
+type IProps = {
   title?: string
   children: React.ReactNode
 }

@@ -1,7 +1,9 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '~views/components/Nav'
-import Footer from '~views/components/Footer'
+// libs
+import React from "react";
+import Head from "next/head";
+// components
+import Nav from "@/views/components/Nav";
+import Footer from "@/views/components/Footer";
 
 const Home = () => (
   <div>
@@ -9,17 +11,14 @@ const Home = () => (
       <title>Home</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <Nav />
-
     <div className="hero">
       <h1 className="title">Welcome to Next.js!</h1>
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
         <br />
-        Good Luck with your project :)
+        Good Luck with your project
       </p>
-
       <div className="row">
         <a href="https://nextjs.org/docs" className="card">
           <h3>Documentation &rarr;</h3>
@@ -38,7 +37,6 @@ const Home = () => (
         </a>
       </div>
     </div>
-
     <Footer />
     <style jsx>{`
       .hero {
@@ -87,6 +85,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;

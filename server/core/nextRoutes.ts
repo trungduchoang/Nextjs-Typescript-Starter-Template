@@ -1,6 +1,11 @@
-const routes = require('next-routes')
+import CONSTANTS from "@/constants";
 
-const routerObj = new routes().add('homeRoute', '/', 'index')
+const routes = require("next-routes");
 
-export const { Link } = routerObj
-export default routerObj
+const routerObj = new routes()
+  .add(CONSTANTS.PAGE_NAME.HOME, "/", "")
+  .add("Name", "/aa", "/Hello");
+
+export const { Link } = routerObj;
+export default routerObj;
+// ///////////////Continue with /aa /Hello hể

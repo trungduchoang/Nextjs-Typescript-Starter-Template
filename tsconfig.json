@@ -14,21 +14,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noImplicitAny": false,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "~types/*": ["./@types/*"],
-      "~graphql/*": ["./graphql/*"],
-      "~graphqlQ/*": ["./graphql/queries/*"],
-      "~graphqlM/*": ["./graphql/mutations/*"],
-      "~views/*": ["./views/*"],
-      "~viewsUi/*": ["./views/ui/*"],
-      "~viewsComp/*": ["./views/components/*"],
-      "~viewsLay/*": ["./views/layouts/*"],
-      "~styles/*": ["./styles/*"],
-      "~server/*": ["./server/*"],
-      "~lib/*": ["./lib/*"],
-      "~assets/*": ["./assets/*"],
-      "~static/*": ["./public/static/*"]
+      "@/*": ["./*"]
     }
   },
   "exclude": ["node_modules"],
