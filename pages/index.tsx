@@ -1,5 +1,5 @@
 // libs
-import React from "react";
+// import React from "react";
 // components
 import DocumentHead from "@/components/DocumentHead";
 import Link from "next/link";
