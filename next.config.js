@@ -5,7 +5,8 @@ const withOffline = require("next-offline");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
-const configureWebpack = (config, { dev }) => {
+const configureWebpack = (cf, { dev }) => {
+  const config = cf;
   config.plugins = config.plugins || [];
 
   config.plugins.push(
@@ -35,7 +36,7 @@ const configureWebpack = (config, { dev }) => {
 
   if (dev) {
     config.module.rules.push({
-      test: /\.jsx?$/,
+      test: /\.tsx?$/,
       exclude: /node_modules/,
       loader: "eslint-loader",
     });

@@ -1,0 +1,27 @@
+{
+  "todohighlight.keywords": [
+    {
+      "text": "Reference:",
+      "color": "#fff",
+      "backgroundColor": "#DB5600"
+    },
+    {
+      "text": "NOTES:",
+      "color": "#fff",
+      "backgroundColor": "#C122E5"
+    }
+  ],
+  "editor.tabSize": 2,
+  "javascript.validate.enable": false,
+  "editor.minimap.enabled": false,
+  "git.enableSmartCommit": true,
+  "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
