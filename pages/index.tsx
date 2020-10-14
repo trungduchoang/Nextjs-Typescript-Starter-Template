@@ -3,7 +3,6 @@ import React from "react";
 // components
 import DocumentHead from "@/components/DocumentHead";
 import Link from "next/link";
-import { isLocalURL } from "next/dist/next-server/lib/router/router";
 
 export const config = {
   amp: true,
