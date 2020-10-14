@@ -20,12 +20,6 @@
 ## How to use
 
 ```javascript
-yarn i
-yarn start
+npm i
+npm start
 ```
-
-## To see before coding;
-
-- [pure-functions-immutability-and-other-software-superpowers](https://medium.com/dailyjs/pure-functions-immutability-and-other-software-superpowers-dfe6039af8f6)
-- [Check out this to read more about /server/graphql workings](https://github.com/Urigo/merge-graphql-schemas)
-- [Context management choice](https://www.youtube.com/watch?v=Q54YDGC_t3Y)

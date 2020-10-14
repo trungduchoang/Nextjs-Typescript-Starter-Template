@@ -1,10 +1,10 @@
-require('dotenv').config()
-
 import express from 'express'
 import next from 'next'
 import morgan from 'morgan'
 import helmet from 'helmet'
 import compression from 'compression'
+
+require('dotenv').config()
 
 const { PORT = '3000', NODE_ENV } = process.env
 const port = parseInt(PORT, 10) || 3000
