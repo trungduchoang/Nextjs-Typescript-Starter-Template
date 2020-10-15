@@ -58,10 +58,10 @@
         "avoidEscape": true
       }
     ],
+    "react/jsx-no-duplicate-props": 0,
     "no-trailing-spaces": 1,
     "global-require": 0,
     "import/no-dynamic-require": 0,
-    "@typescript-eslint/no-unused-vars": "off",
     "no-underscore-dangle": 0,
     "no-shadow": 0,
     "import/extensions": 0,
@@ -78,7 +78,8 @@
     // ESLint-TS Issue: https://github.com/typescript-eslint/typescript-eslint/issues/2502
     "no-use-before-define": 0,
     // For ongoing typescript-eslint Bug with ts-interface (ts-interface must not be unused-vars)
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": "off"
     // "@typescript-eslint/consistent-type-definitions": 0, // Not working??
     // "@typescript-eslint/no-unused-vars-experimental": 2
   }

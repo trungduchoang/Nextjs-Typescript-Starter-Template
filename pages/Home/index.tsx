@@ -7,12 +7,13 @@ import styles from "./hello-pages.module.scss";
 const HelloPage = () => (
   <div className={styles.helloPagesWrapper}>
     <DocumentHead />
+    <amp-state id="products" src="/mocks/mock.json" />
     <amp-img
-      alt="A view of the sea"
-      src="https://simonpaulhair.co.uk/wp-content/uploads/2014/03/320x320.gif"
-      width="320"
-      height="320"
+      src="/mocks/discover-electronic-scene.jpg"
+      width="60"
+      height="30"
       layout="responsive"
+      alt="discover-electronic-scene"
     />
   </div>
 );

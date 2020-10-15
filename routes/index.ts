@@ -1,5 +1,12 @@
+// libs
 import Router from "next-routes";
+// routes
+import routes from "./routes";
 
-const routes = new Router().add("home", "/", "test-on-tap");
+const appRoutes = new Router();
 
-export default routes;
+routes.forEach((route) => {
+  appRoutes.add(route.pageName, route.path, route.pages);
+});
+
+export { appRoutes };
