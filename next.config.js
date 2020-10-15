@@ -5,8 +5,7 @@ const withOffline = require("next-offline");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
-const configureWebpack = (cf, { dev }) => {
-  const config = cf;
+const configureWebpack = (config, { dev }) => {
   config.plugins = config.plugins || [];
 
   config.plugins.push(

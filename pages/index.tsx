@@ -2,24 +2,12 @@
 import React from "react";
 // components
 import DocumentHead from "@/components/DocumentHead";
-import Link from "next/link";
 
-export const config = {
-  amp: true,
-};
+const Main: React.FC = () => (
+  <div className="main-wrapper">
+    <DocumentHead />
+  </div>
+);
 
-const Main = () => {
-  console.log(111);
-
-  return (
-    <div className="main-wrapper">
-      <DocumentHead />
-      Content
-      <Link href="./hello-pages">
-        <a>Im a Link</a>
-      </Link>
-    </div>
-  );
-};
-
+export const config = { amp: true };
 export default Main;
