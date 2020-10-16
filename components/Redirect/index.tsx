@@ -2,12 +2,12 @@
 import { useEffect } from "react";
 import { useRouter } from "next/dist/client/router";
 
-export default function Redirect() {
+export default function Redirect({ to }: { to: string }) {
   const router = useRouter();
   const { pathname, push } = router;
 
   useEffect(() => {
-    if (pathname === "/") push("/en");
-  }, [pathname, push]);
+    push(to);
+  }, [pathname, push, to]);
   return null;
 }

@@ -1,4 +1,4 @@
-import PAGE_NAME from "./pageName";
+import PAGE_NAME from "./pageNames";
 import ROUTE from "./routes";
 import ENDPOINT from "./endpoints";
 
