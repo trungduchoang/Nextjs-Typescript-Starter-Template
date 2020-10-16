@@ -10,3 +10,14 @@ export type IROUTES = Array<{
   path: string;
   pages: string;
 }>;
+
+export interface ENV_INFO {
+  [env: string]: { BASE_URL: string };
+}
+
+export interface REDUX_ACTION {
+  type: string;
+  payload: {
+    data: any;
+  };
+}

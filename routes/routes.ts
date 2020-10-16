@@ -1,5 +1,5 @@
 // types
-import { IROUTES } from "@/@types/common";
+import { IROUTES } from "@/types/common";
 // others
 import CONSTANTS from "@/constants";
 

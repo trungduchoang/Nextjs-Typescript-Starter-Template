@@ -1,6 +1,6 @@
 // libs
 import next from "next";
-import { createServer } from "http";
+import express from "express";
 // routes
 import { appRoutes } from "@/routes";
 
@@ -14,5 +14,8 @@ const nextApp = next({ dev });
 const requestHandler = appRoutes.getRequestHandler(nextApp);
 
 nextApp.prepare().then(() => {
-  createServer(requestHandler).listen(port);
+  const server = express();
+  server.use(requestHandler).listen(port, (err) => {
+    if (err) throw err;
+  });
 });
