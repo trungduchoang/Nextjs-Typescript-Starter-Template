@@ -1,9 +1,11 @@
 import PAGE_NAME from "./pageName";
-import ROUTES from "./routes";
+import ROUTE from "./routes";
+import ENDPOINT from "./endpoints";
 
 const CONSTANTS = {
   PAGE_NAME,
-  ROUTES,
+  ROUTE,
+  ENDPOINT,
 };
 
 export default CONSTANTS;

@@ -1,12 +1,12 @@
 // types
-import { ROUTES } from "@/types/common";
+import { ROUTE } from "@/types/common";
 // others
 import CONSTANTS from "@/constants";
 
-const ROUTES: ROUTES = [
+const routes: ROUTE = [
   {
     pageName: CONSTANTS.PAGE_NAME.HOME,
-    path: CONSTANTS.ROUTES.HOME,
+    path: CONSTANTS.ROUTE.HOME,
     pages: "Home",
   },
   {
@@ -16,4 +16,4 @@ const ROUTES: ROUTES = [
   },
 ];
 
-export default ROUTES;
+export default routes;

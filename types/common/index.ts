@@ -1,4 +1,4 @@
-export type ROUTES = Array<{
+export type ROUTE = Array<{
   pageName: string;
   path: string;
   pages: string;
@@ -17,6 +17,7 @@ export interface REDUX_ACTION {
 
 export interface ASYNC_ACTION {
   data?: { [key: string]: any };
+  params?: { [key: string]: any };
   cbSuccess?: (...args: Array<any>) => any;
   cbError?: (url: string, error: any) => any;
 }
@@ -36,7 +37,7 @@ export type HTTP_METHODS =
 export interface REQUEST_TYPE {
   url: string;
   method: HTTP_METHODS;
-  payload?: { [key: string]: any };
+  data?: { [key: string]: any };
   params?: { [key: string]: any };
   cbSuccess?: (...args: Array<any>) => any;
   cbError?: (url: string, error: any) => any;
