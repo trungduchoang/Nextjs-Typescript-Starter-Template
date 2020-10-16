@@ -36,9 +36,7 @@ export const initializeStore = (preloadedState) => {
   return _store;
 };
 
-export function useStore(initialState) {
+export function useInitStore(initialState) {
   const store = useMemo(() => initializeStore(initialState), [initialState]);
   return store;
 }
-
-export type ROOT_STATE = ReturnType<typeof rootReducer>;

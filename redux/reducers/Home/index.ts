@@ -1,5 +1,8 @@
+// libs
+import { combineReducers } from "redux";
+// reducers
 import specialHotelReducer from "./specialHotelReducer";
 
-export const Home = {
+export const Home = combineReducers({
   specialHotelReducer,
-};
+});

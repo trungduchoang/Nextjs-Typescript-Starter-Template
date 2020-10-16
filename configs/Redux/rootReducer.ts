@@ -3,16 +3,8 @@ import { combineReducers } from "redux";
 // reducers
 import * as reducers from "@/redux/reducers";
 
-const typedReducers = { ...reducers };
-
-const mainReducers = Object.keys(reducers).reduce(
-  (accReducers, reducerKey) => ({
-    ...accReducers,
-    [reducerKey]: combineReducers(typedReducers[reducerKey]),
-  }),
-  {}
-);
-
+const mainReducers = { ...reducers };
 const rootReducer = combineReducers(mainReducers);
 
 export default rootReducer;
+export type ROOT_STATE = ReturnType<typeof rootReducer>;
