@@ -1,6 +1,5 @@
 // libs
 import React from "react";
-import DocumentHead from "@/components/DocumentHead";
 // hooks
 import { useStore } from "@/hooks";
 // others
@@ -12,7 +11,6 @@ const HelloPage = () => {
 
   return (
     <div>
-      <DocumentHead />
       <hr />
       <p className={styles.justP}>Im a p</p>
     </div>

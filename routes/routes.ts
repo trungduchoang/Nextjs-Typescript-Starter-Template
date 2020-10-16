@@ -1,9 +1,9 @@
 // types
-import { IROUTES } from "@/types/common";
+import { ROUTES } from "@/types/common";
 // others
 import CONSTANTS from "@/constants";
 
-const ROUTES: IROUTES = [
+const ROUTES: ROUTES = [
   {
     pageName: CONSTANTS.PAGE_NAME.HOME,
     path: CONSTANTS.ROUTES.HOME,
