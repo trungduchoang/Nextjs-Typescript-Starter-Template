@@ -11,7 +11,10 @@ const initialState = {
   error: {},
 };
 
-export default (state = initialState, { type, payload }: REDUX_ACTION) => {
+export function specialHotelReducer(
+  state = initialState,
+  { type, payload }: REDUX_ACTION
+) {
   switch (type) {
     case SERVICE_TYPES.FETCH_HOTEL_INFO_SUCCESS:
       return {
@@ -38,4 +41,4 @@ export default (state = initialState, { type, payload }: REDUX_ACTION) => {
     default:
       return state;
   }
-};
+}
