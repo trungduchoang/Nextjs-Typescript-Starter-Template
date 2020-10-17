@@ -1,7 +1,6 @@
 require("dotenv").config();
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
-const withOffline = require("next-offline");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
@@ -44,33 +43,6 @@ const configureWebpack = (config, { dev }) => {
   return config;
 };
 
-const configureWorkbox = {
-  swDest: process.env.NEXT_EXPORT
-    ? "service-worker.js"
-    : "static/service-worker.js",
-  runtimeCaching: [
-    {
-      urlPattern: /^https?.*/,
-      handler: "NetworkFirst",
-      options: {
-        cacheName: "offlineCache",
-        expiration: {
-          maxEntries: 200,
-        },
-      },
-    },
-  ],
-};
-
-module.exports = withOffline({
+module.exports = {
   webpack: configureWebpack,
-  workboxOpts: configureWorkbox,
-  async rewrites() {
-    return [
-      {
-        source: "/service-worker.js",
-        destination: "/_next/static/service-worker.js",
-      },
-    ];
-  },
-});
+};
