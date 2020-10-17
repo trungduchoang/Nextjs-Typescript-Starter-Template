@@ -1,20 +1,19 @@
 // types
-import { TYPES } from "@/redux/actionTypes/advertisementService";
+import { SERVICE_TYPES } from "@/redux/actionTypes/services";
 import { REDUX_ACTION } from "@/types/common";
 
 const initialState = {
-  hotelInfo: {},
+  hotelInfo: {
+    happy: "hotel",
+  },
   isLoading: false,
   isError: false,
   error: {},
 };
 
-export default function (
-  state = initialState,
-  { type, payload }: REDUX_ACTION
-) {
+export default (state = initialState, { type, payload }: REDUX_ACTION) => {
   switch (type) {
-    case TYPES.FETCH_HOTEL_INFO_SUCCESS:
+    case SERVICE_TYPES.FETCH_HOTEL_INFO_SUCCESS:
       return {
         ...state,
         hotelInfo: payload.data,
@@ -22,14 +21,14 @@ export default function (
         isError: false,
         error: {},
       };
-    case TYPES.FETCH_HOTEL_INFO_LOADING:
+    case SERVICE_TYPES.FETCH_HOTEL_INFO_LOADING:
       return {
         ...state,
         isLoading: true,
         isError: false,
         error: {},
       };
-    case TYPES.FETCH_HOTEL_INFO_ERROR:
+    case SERVICE_TYPES.FETCH_HOTEL_INFO_ERROR:
       return {
         ...state,
         isLoading: false,
@@ -39,4 +38,4 @@ export default function (
     default:
       return state;
   }
-}
+};

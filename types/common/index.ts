@@ -1,4 +1,4 @@
-export type ROUTE = Array<{
+export type ROUTES = Array<{
   pageName: string;
   path: string;
   pages: string;
@@ -22,7 +22,7 @@ export interface ASYNC_ACTION {
   cbError?: (url: string, error: any) => any;
 }
 
-export type HTTP_METHODS =
+export type HTTP_METHOD =
   | "POST"
   | "GET"
   | "PATCH"
@@ -36,7 +36,7 @@ export type HTTP_METHODS =
 
 export interface REQUEST_TYPE {
   url: string;
-  method: HTTP_METHODS;
+  method: HTTP_METHOD;
   data?: { [key: string]: any };
   params?: { [key: string]: any };
   cbSuccess?: (...args: Array<any>) => any;

@@ -5,16 +5,14 @@ import { useStore } from "@/hooks";
 // others
 import styles from "./hello-pages.module.scss";
 
-const HelloPage = () => {
+const Home = () => {
   const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
-  console.log({ hotelInfo });
 
   return (
-    <div>
-      <hr />
-      <p className={styles.justP}>Im a p</p>
-    </div>
+    <pre className={styles.hotelInfo}>
+      <code>{JSON.stringify(hotelInfo, null, 2)}</code>
+    </pre>
   );
 };
 
-export default HelloPage;
+export default Home;
