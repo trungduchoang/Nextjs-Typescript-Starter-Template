@@ -1,5 +1,5 @@
 // types
-import { SERVICE_TYPES } from "@/redux/actionTypes/services";
+import { SERVICE_TYPES } from "@/redux/types/services";
 import { ASYNC_ACTION } from "@/types/common";
 // others
 import { ENDPOINTS } from "@/api/endpoints";

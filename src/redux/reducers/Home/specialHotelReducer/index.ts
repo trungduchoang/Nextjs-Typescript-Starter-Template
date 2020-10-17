@@ -1,5 +1,5 @@
 // types
-import { SERVICE_TYPES } from "@/redux/actionTypes/services";
+import { SERVICE_TYPES } from "@/redux/types/services";
 import { REDUX_ACTION } from "@/types/common";
 
 const initialState = {
