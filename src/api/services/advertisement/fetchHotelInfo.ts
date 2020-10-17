@@ -1,5 +1,5 @@
 // types
-import { SERVICE_TYPES } from "@/redux/types/services";
+import TYPES from "@/redux/dispatchTypes";
 import { ASYNC_ACTION } from "@/types/common";
 // others
 import { ENDPOINTS } from "@/api/endpoints";
@@ -11,7 +11,7 @@ export const fetchHotelInfo = ({ data = {}, cbSuccess }: ASYNC_ACTION = {}) =>
     method: "POST",
     cbSuccess,
     data,
-    LOADING_ACTION: SERVICE_TYPES.FETCH_HOTEL_INFO_LOADING,
-    SUCCESS_ACTION: SERVICE_TYPES.FETCH_HOTEL_INFO_SUCCESS,
-    ERROR_ACTION: SERVICE_TYPES.FETCH_HOTEL_INFO_ERROR,
+    LOADING_ACTION: TYPES.FETCH_HOTEL_INFO_LOADING,
+    SUCCESS_ACTION: TYPES.FETCH_HOTEL_INFO_SUCCESS,
+    ERROR_ACTION: TYPES.FETCH_HOTEL_INFO_ERROR,
   });

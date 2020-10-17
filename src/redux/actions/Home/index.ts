@@ -1,3 +1,3 @@
-import { TYPES } from "@/redux/types/components";
+import TYPES from "@/redux/dispatchTypes";
 
-export const example = () => ({ type: TYPES.HOME.EXAMPLE });
+export const example = () => ({ type: TYPES.EXAMPLE });

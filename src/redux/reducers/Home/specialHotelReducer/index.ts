@@ -1,5 +1,5 @@
 // types
-import { SERVICE_TYPES } from "@/redux/types/services";
+import TYPES from "@/redux/dispatchTypes";
 import { REDUX_ACTION } from "@/types/common";
 
 const initialState = {
@@ -16,7 +16,7 @@ export function specialHotelReducer(
   { type, payload }: REDUX_ACTION
 ) {
   switch (type) {
-    case SERVICE_TYPES.FETCH_HOTEL_INFO_SUCCESS:
+    case TYPES.FETCH_HOTEL_INFO_SUCCESS:
       return {
         ...state,
         hotelInfo: payload.data,
@@ -24,14 +24,14 @@ export function specialHotelReducer(
         isError: false,
         error: {},
       };
-    case SERVICE_TYPES.FETCH_HOTEL_INFO_LOADING:
+    case TYPES.FETCH_HOTEL_INFO_LOADING:
       return {
         ...state,
         isLoading: true,
         isError: false,
         error: {},
       };
-    case SERVICE_TYPES.FETCH_HOTEL_INFO_ERROR:
+    case TYPES.FETCH_HOTEL_INFO_ERROR:
       return {
         ...state,
         isLoading: false,
