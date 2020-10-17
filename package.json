@@ -5,7 +5,7 @@
     "start": "nodemon",
     "start:production": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json -r tsconfig-paths/register dist",
     "build": "next build && tsc --project tsconfig.server.json",
-    "lint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./*/* --max-warnings=0"
+    "lint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0"
   },
   "husky": {
     "hooks": {
