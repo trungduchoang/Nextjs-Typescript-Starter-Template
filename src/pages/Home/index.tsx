@@ -3,7 +3,7 @@ import React from "react";
 // hooks
 import { useStore } from "@/hooks";
 // others
-import styles from "./hello-pages.module.scss";
+import styles from "./home.module.scss";
 
 const Home = () => {
   const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
