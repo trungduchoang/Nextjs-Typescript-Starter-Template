@@ -2,7 +2,7 @@
 import { SERVICE_TYPES } from "@/redux/actionTypes/services";
 import { ASYNC_ACTION } from "@/types/common";
 // others
-import { ENDPOINTS } from "@/redux/endpoints";
+import { ENDPOINTS } from "@/api/endpoints";
 import request from "@/utils/request";
 
 export const fetchHotelInfo = ({ data = {}, cbSuccess }: ASYNC_ACTION = {}) =>
