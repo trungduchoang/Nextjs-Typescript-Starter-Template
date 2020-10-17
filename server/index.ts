@@ -2,7 +2,7 @@
 import next from "next";
 import express from "express";
 // routes
-import { appRoutes } from "@/routes";
+import { appRoutes } from "../src/routes";
 
 require("dotenv").config();
 
