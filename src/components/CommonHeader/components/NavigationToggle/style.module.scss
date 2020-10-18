@@ -1,0 +1,12 @@
+.toggleBtn {
+  padding: 4px 10px;
+  background-color: #ffeeee;
+  .iconBar {
+    display: block;
+    width: 16px;
+    height: 2px;
+    margin: 2px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1px;
+  }
+}

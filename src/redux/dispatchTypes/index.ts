@@ -1,8 +1,8 @@
-import PAGE_TYPES from "./pages";
+import COMPONENT_TYPES from "./components";
 import SERVICE_TYPES from "./services";
 
 const TYPES = {
-  ...PAGE_TYPES,
+  ...COMPONENT_TYPES,
   ...SERVICE_TYPES,
 };
 

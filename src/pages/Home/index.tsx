@@ -2,14 +2,12 @@
 import React from "react";
 // hooks
 import { useStore } from "@/hooks";
-// others
-import styles from "./home.module.scss";
 
 const Home = () => {
   const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
 
   return (
-    <pre className={styles.hotelInfo}>
+    <pre>
       <code>{JSON.stringify(hotelInfo, null, 2)}</code>
     </pre>
   );

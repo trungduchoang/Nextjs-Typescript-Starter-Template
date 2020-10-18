@@ -1,13 +1,22 @@
+// libs
 import React from "react";
 import { Provider } from "react-redux";
+// components
+import AppLayout from "./AppLayout";
+// others
 import { useInitStore } from "@/configs/Redux/store";
+import "@/styles/main.css";
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   const store = useInitStore(pageProps.initialReduxState);
 
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <AppLayout>
+        <Component {...pageProps} />
+      </AppLayout>
     </Provider>
   );
-}
+};
+
+export default App;
