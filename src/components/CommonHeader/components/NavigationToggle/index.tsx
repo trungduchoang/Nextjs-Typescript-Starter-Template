@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // others
-import style from "./style.module.scss";
+import style from "./NavigationToggle.module.scss";
 
 const NavigationToggle = () => (
   <span>
