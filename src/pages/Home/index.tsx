@@ -1,16 +1,17 @@
 // libs
 import React from "react";
-// hooks
-import { useStore } from "@/hooks";
+// components
+import Carousel from "@/components/Carousel";
+// datasource, mocks
+import cityNowSlide from "@/mocks/Home/cityNowSlide";
+// others
+import style from "./Home.module.scss";
 
-const Home = () => {
-  const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
-
-  return (
-    <pre>
-      <code>{JSON.stringify(hotelInfo, null, 2)}</code>
-    </pre>
-  );
-};
+// const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
+const Home = () => (
+  <div className={style.wrapper}>
+    <Carousel slides={cityNowSlide} />
+  </div>
+);
 
 export default Home;

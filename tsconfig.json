@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "noImplicitAny": false,
+    "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
