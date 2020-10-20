@@ -27,6 +27,7 @@ html {
   --color-secondary-accent: #920de90b;
   --color-shadow: #f4f4f4;
   --color-text: rgba(0, 0, 0, 0.7);
+  --color-text-head: rgba(0, 0, 0, 0.8);
   --color-text-secondary: #999;
   --btn-bg: #f7f7f7;
   --btn-border: #d0d0d0;
@@ -159,6 +160,16 @@ nav ul li ul li a {
 }
 
 /* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-head);
+  font-weight: 400;
+}
+
 code,
 samp {
   background-color: var(--color-accent);
@@ -189,7 +200,7 @@ ul li {
 
 p {
   font-size: 1rem;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
   padding: 0;
 }
 
