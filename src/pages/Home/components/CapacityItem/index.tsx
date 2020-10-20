@@ -14,7 +14,7 @@ const CapacityItem = ({ title, description, imgSrc }: IProps) => (
     <div className={style.titleAvatar}>
       <img alt={title} src={imgSrc} />
     </div>
-    <h3 className={style.title}>{title}</h3>
+    <h2 className={style.title}>{title}</h2>
     <p className={style.description}>{description}</p>
   </div>
 );
