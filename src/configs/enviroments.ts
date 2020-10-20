@@ -7,7 +7,7 @@ const { CLIENT_ENV = "development" } = process.env;
 
 const envInfo: ENV_INFO = {
   development: {
-    BASE_URL: "http://192.168.1.37:8081",
+    BASE_URL: "",
   },
   production: {
     BASE_URL: "",
