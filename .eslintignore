@@ -2,4 +2,4 @@
 *.config.js
 *.d.ts
 *.ico
-src/styles/main.css
+*.css

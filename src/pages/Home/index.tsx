@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // components
-import Slider from "@/components/Slider";
+import Slider from "@/libs/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
 import Mission from "./mains/Mission";
 import News from "./mains/News";

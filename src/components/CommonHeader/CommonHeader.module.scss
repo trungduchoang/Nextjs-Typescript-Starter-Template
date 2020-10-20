@@ -1,5 +1,11 @@
 .wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 10px 10px;
+  width: 100%;
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 30px 10px 10px;
+  }
 }
