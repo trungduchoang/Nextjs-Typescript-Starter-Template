@@ -6,6 +6,7 @@ import DocumentHead from "@/components/DocumentHead";
 import AppLayout from "./AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
+import "@/libs/Slider/slide.scss";
 import "@/styles/main.css";
 
 const App = ({ Component, pageProps }) => {

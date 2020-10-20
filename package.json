@@ -5,11 +5,12 @@
     "start": "nodemon",
     "start:production": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json -r tsconfig-paths/register dist",
     "build": "next build && tsc --project tsconfig.server.json",
-    "lint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0"
+    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0",
+    "stlint:fix": "stylelint ./src --syntax scss --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix"
+      "pre-commit": "npm run eslint:fix && npm run stlint:fix"
     }
   },
   "dependencies": {
