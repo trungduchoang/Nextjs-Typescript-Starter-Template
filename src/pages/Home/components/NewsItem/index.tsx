@@ -15,7 +15,7 @@ const NewsItem = ({ title, time, imgSrc }: IProps) => (
       <img alt={title} src={imgSrc} />
     </div>
     <h2 className={style.title}>{title}</h2>
-    <p className={style.time}>&#x1F551; {time}</p>
+    <p className={style.time}>{time}</p>
   </div>
 );
 
