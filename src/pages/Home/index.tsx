@@ -10,13 +10,17 @@ import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
 // others
 import style from "./Home.module.scss";
 
-const Home = () => (
-  <div className={style.wrapper}>
-    <Slider slides={cityNowSlide} />
-    <CapacityInfo />
-    <Mission />
-    <News />
-  </div>
-);
+const Home = () => {
+  // eslint-disable-next-line no-console
+  console.log("Dont forget Reset head");
+  return (
+    <div className={style.wrapper}>
+      <Slider slides={cityNowSlide} />
+      <CapacityInfo />
+      <Mission />
+      <News />
+    </div>
+  );
+};
 
 export default Home;
