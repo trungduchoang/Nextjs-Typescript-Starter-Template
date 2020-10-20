@@ -4,10 +4,10 @@ import React from "react";
 import style from "./AddressInfo.module.scss";
 
 const AddressInfo = ({ data }: { data: string }) => (
-  <div>
+  <p>
     <span className={style.icon} />
-    <span className={style.data}>{data}</span>
-  </div>
+    {data}
+  </p>
 );
 
 export default AddressInfo;

@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // components
-import Carousel from "@/components/Carousel";
+import Slider from "@/components/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
 // datasource, mocks
 import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
@@ -10,7 +10,7 @@ import style from "./Home.module.scss";
 
 const Home = () => (
   <div className={style.wrapper}>
-    <Carousel slides={cityNowSlide} />
+    <Slider slides={cityNowSlide} />
     <CapacityInfo />
   </div>
 );

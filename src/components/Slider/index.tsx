@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 // others
-import style from "./Carousel.module.scss";
+import style from "./Slider.module.scss";
 
 const IMAGE_PARTS = 4;
 const AUTO_CHANGE_TIME = 4000;
 
-const Carousel = ({ slides }: { slides: Array<any> }) => {
+const Slider = ({ slides }: { slides: Array<any> }) => {
   const totalSlide = slides.length;
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
@@ -70,13 +70,13 @@ const Carousel = ({ slides }: { slides: Array<any> }) => {
           </div>
         ))}
       </div>
-      <div className={style.slideControl} onClick={goToPrevSlide} />
+      <div className={style.sliderControl} onClick={goToPrevSlide} />
       <div
-        className={classNames(style.slideControl, style.slideControlRight)}
+        className={classNames(style.sliderControl, style.sliderControlRight)}
         onClick={goToNextSlide}
       />
     </div>
   );
 };
 
-export default Carousel;
+export default Slider;
