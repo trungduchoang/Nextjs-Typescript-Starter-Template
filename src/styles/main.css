@@ -31,13 +31,8 @@ html {
   --btn-bg: #f7f7f7;
   --btn-border: #d0d0d0;
   --hover-brightness: 1.2;
-  --justify-important: center;
+  --justify-content: center;
   --justify-normal: left;
-  --line-height: 1.5;
-  --width-card: 285px;
-  --width-card-medium: 460px;
-  --width-card-wide: 800px;
-  --width-content: 1080px;
 }
 
 /* Layout */
@@ -51,7 +46,6 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-family);
-  line-height: var(--line-height);
   margin: 0;
   overflow-x: hidden;
 }
@@ -60,7 +54,6 @@ footer,
 header,
 main {
   margin: 0 auto;
-  max-width: var(--width-content);
   padding: 2rem 1rem;
 }
 
@@ -74,7 +67,7 @@ hr {
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: var(--justify-important);
+  justify-content: var(--justify-center);
 }
 
 section aside {
@@ -83,15 +76,10 @@ section aside {
   box-shadow: var(--box-shadow) var(--color-shadow);
   margin: 1rem;
   padding: 1.25rem;
-  width: var(--width-card);
 }
 
 section aside:hover {
   box-shadow: var(--box-shadow) var(--color-bg-secondary);
-}
-
-section aside img {
-  max-width: 100%;
 }
 
 [hidden] {
@@ -106,7 +94,7 @@ main header {
 }
 
 header {
-  text-align: var(--justify-important);
+  text-align: var(--justify-center);
 }
 
 header a b,
@@ -123,7 +111,6 @@ header nav img {
 
 section header {
   padding-top: 0;
-  width: 100%;
 }
 
 /* Nav */
@@ -164,7 +151,6 @@ nav ul li ul {
   position: absolute;
   top: 1.7rem;
   white-space: nowrap;
-  width: auto;
 }
 
 nav ul li ul li,
@@ -192,15 +178,6 @@ details summary {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: var(--line-height);
-}
-
 mark {
   padding: 0.1rem;
 }
@@ -217,14 +194,12 @@ p {
 
 pre {
   margin: 1rem 0;
-  max-width: var(--width-card-wide);
   padding: 1rem 0;
 }
 
 pre code,
 pre samp {
   display: block;
-  max-width: var(--width-card-wide);
   padding: 0.5rem 2rem;
   white-space: pre-wrap;
 }
@@ -267,7 +242,6 @@ button {
   display: inline-block;
   font-size: medium;
   font-weight: bold;
-  line-height: var(--line-height);
   margin: 0.5rem 0;
   padding: 1rem 2rem;
 }
@@ -304,10 +278,6 @@ figure {
   padding: 0;
 }
 
-figure img {
-  max-width: 100%;
-}
-
 figure figcaption {
   color: var(--color-text-secondary);
 }
@@ -331,8 +301,6 @@ form {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow) var(--color-shadow);
   display: block;
-  max-width: var(--width-card-wide);
-  min-width: var(--width-card);
   padding: 1.5rem;
   text-align: var(--justify-normal);
 }
@@ -348,7 +316,6 @@ select,
 textarea {
   display: block;
   font-size: inherit;
-  max-width: var(--width-card-wide);
 }
 
 input[type="checkbox"],
@@ -389,7 +356,6 @@ table {
   border-radius: var(--border-radius);
   border-spacing: 0;
   display: inline-block;
-  max-width: 100%;
   overflow-x: auto;
   padding: 0;
   white-space: nowrap;
@@ -399,7 +365,7 @@ table td,
 table th,
 table tr {
   padding: 0.4rem 0.8rem;
-  text-align: var(--justify-important);
+  text-align: var(--justify-center);
 }
 
 table thead {
@@ -432,17 +398,14 @@ table tr:nth-child(even) {
 blockquote {
   display: block;
   font-size: x-large;
-  line-height: var(--line-height);
   margin: 1rem auto;
-  max-width: var(--width-card-medium);
   padding: 1.5rem 1rem;
-  text-align: var(--justify-important);
+  text-align: var(--justify-center);
 }
 
 blockquote footer {
   color: var(--color-text-secondary);
   display: block;
   font-size: small;
-  line-height: var(--line-height);
   padding: 1.5rem 0;
 }
