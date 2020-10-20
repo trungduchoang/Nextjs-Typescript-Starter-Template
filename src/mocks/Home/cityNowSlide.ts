@@ -1,4 +1,4 @@
-export default [
+export const cityNowSlide = [
   {
     companyName: "CITYNOW",
     description: "CREATE TOMORROW",

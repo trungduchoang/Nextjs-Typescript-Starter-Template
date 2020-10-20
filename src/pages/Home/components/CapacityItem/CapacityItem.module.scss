@@ -1,0 +1,31 @@
+.wrapper {
+  display: inline-block;
+  max-width: 350px;
+  padding: 30px 15px 40px;
+  // padding: 0 15px;
+  text-align: center;
+
+  .titleAvatar {
+    text-align: center;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #dddddd;
+      border-radius: 50%;
+      transition: 450ms ease-in-out;
+    }
+  }
+
+  .title {
+    margin-top: 25px;
+    font-size: 1.4rem;
+  }
+
+  .content {
+    padding: 0 45px;
+    color: #838386;
+    text-align: justify;
+  }
+}
