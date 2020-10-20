@@ -2,6 +2,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 // components
+import DocumentHead from "@/components/DocumentHead";
 import AppLayout from "./AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
@@ -13,7 +14,10 @@ const App = ({ Component, pageProps }) => {
   return (
     <Provider store={store}>
       <AppLayout>
-        <Component {...pageProps} />
+        <>
+          <DocumentHead />
+          <Component {...pageProps} />
+        </>
       </AppLayout>
     </Provider>
   );
