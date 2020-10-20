@@ -1,4 +1,8 @@
 .wrapper {
+  @media screen and (max-width: 1028px) {
+    display: none;
+  }
+
   padding: 5px 20px;
 
   li a {

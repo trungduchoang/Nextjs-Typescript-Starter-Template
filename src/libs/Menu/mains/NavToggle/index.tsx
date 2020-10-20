@@ -1,10 +1,10 @@
 // libs
 import React from "react";
 // others
-import style from "./NavigationToggle.module.scss";
+import style from "./NavToggle.module.scss";
 
-const NavigationToggle = () => (
-  <span>
+const NavToggle = () => (
+  <span className={style.wrapper}>
     <button type="button" className={style.toggleBtn}>
       <div className={style.iconBar}></div>
       <div className={style.iconBar}></div>
@@ -13,4 +13,4 @@ const NavigationToggle = () => (
   </span>
 );
 
-export default NavigationToggle;
+export default NavToggle;

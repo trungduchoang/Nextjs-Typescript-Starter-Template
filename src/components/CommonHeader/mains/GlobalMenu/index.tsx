@@ -3,8 +3,8 @@ import React from "react";
 // dataSources, mocks
 import { navigationItems } from "../../dataSources/navigationItems";
 // components
-import NavBar from "../../components/NavBar";
+import Menu from "@/libs/Menu";
 
-const GlobalMenu = () => <NavBar items={navigationItems} />;
+const GlobalMenu = () => <Menu dataSource={navigationItems} />;
 
 export default GlobalMenu;
