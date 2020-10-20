@@ -2,18 +2,18 @@
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 // others
-import style from "./Carousel.module.css";
+import style from "./Carousel.module.scss";
 
 const IMAGE_PARTS = 4;
 const AUTO_CHANGE_TIME = 4000;
 
 const Carousel = ({ slides }: { slides: Array<any> }) => {
+  const totalSlide = slides.length;
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
   const [isReady, _] = useState(true);
 
   const changeSlide = (unit: number) => {
-    const totalSlide = slides.length;
     let nextSlide = activeSlide + unit;
     if (nextSlide < 0) nextSlide = totalSlide - 1;
     if (nextSlide >= totalSlide) nextSlide = 0;
@@ -34,31 +34,34 @@ const Carousel = ({ slides }: { slides: Array<any> }) => {
 
   return (
     <div className={classNames(style.wrapper, { [style.isReady]: isReady })}>
-      <div className={classNames(style.sliderContainer)}>
+      <div className={style.sliderContainer}>
         {slides.map((slide, index) => (
           <div
             className={classNames(style.slide, {
               [style.isActive]: activeSlide === index,
-              [style.isPrev]: prevSlide === index,
+              [style.isPrev]: prevSlide === index && totalSlide > 1,
             })}
             key={slide.companyName}
           >
-            <div className={classNames(style.slideContent)}>
+            <div className={style.slideContent}>
               <h2 className={classNames(style.slideHeading)}>
-                {slide.companyName.split("").map((letter) => (
-                  <span className={classNames(style.letter)}>{letter}</span>
+                {slide.companyName.split("").map((letter, i) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <span className={classNames(style.letter)} key={i}>
+                    {letter}
+                  </span>
                 ))}
               </h2>
               <h3 className={classNames(style.slideSubHeading)}>
-                {slide.description || slide.companyName}
+                {slide.description}
               </h3>
               <p className={classNames(style.readmore)}>Xem thêm</p>
             </div>
-            <div className={classNames(style.bgPartContainer)}>
+            <div className={style.bgPartContainer}>
               {[...Array(IMAGE_PARTS).keys()].map((id) => (
-                <div className={classNames(style.bgPartWrapper)} key={id}>
+                <div className={style.bgPart} key={id}>
                   <div
-                    className={classNames(style.bgPartInner)}
+                    className={style.bgPartInner}
                     style={{ background: `url(${slide.imgSrc})` }}
                   />
                 </div>
@@ -67,7 +70,7 @@ const Carousel = ({ slides }: { slides: Array<any> }) => {
           </div>
         ))}
       </div>
-      <div className={classNames(style.slideControl)} onClick={goToPrevSlide} />
+      <div className={style.slideControl} onClick={goToPrevSlide} />
       <div
         className={classNames(style.slideControl, style.slideControlRight)}
         onClick={goToNextSlide}
