@@ -188,6 +188,7 @@ ul li {
 }
 
 p {
+  font-size: 1rem;
   margin: 0.75rem 0;
   padding: 0;
 }
@@ -212,7 +213,7 @@ sup {
   background-color: var(--color-secondary);
   border-radius: var(--border-radius);
   color: var(--color-bg);
-  font-size: xx-small;
+  font-size: 0.6rem;
   font-weight: bold;
   margin: 0.2rem;
   padding: 0.2rem 0.3rem;
@@ -240,7 +241,7 @@ a strong,
 button {
   border-radius: var(--border-radius);
   display: inline-block;
-  font-size: medium;
+  font-size: 1rem;
   font-weight: bold;
   margin: 0.5rem 0;
   padding: 1rem 2rem;
@@ -397,7 +398,7 @@ table tr:nth-child(even) {
 /* Quotes */
 blockquote {
   display: block;
-  font-size: x-large;
+  font-size: 1.2rem;
   margin: 1rem auto;
   padding: 1.5rem 1rem;
   text-align: var(--justify-center);
@@ -406,6 +407,6 @@ blockquote {
 blockquote footer {
   color: var(--color-text-secondary);
   display: block;
-  font-size: small;
+  font-size: 0.8rem;
   padding: 1.5rem 0;
 }
