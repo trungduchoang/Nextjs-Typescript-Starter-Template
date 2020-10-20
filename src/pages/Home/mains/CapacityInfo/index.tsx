@@ -12,9 +12,11 @@ const CapacityInfo = () => (
   <div className={style.wrapper}>
     <div className={style.inner}>
       <SectionTitle title="CHÚNG TÔI LÀM GÌ?" />
-      {capacityInfo.map(({ title, description, imgSrc }) => (
-        <CapacityItem {...{ title, description, imgSrc, key: title }} />
-      ))}
+      <div className={style.capacityItemsContainer}>
+        {capacityInfo.map(({ title, description, imgSrc }) => (
+          <CapacityItem {...{ title, description, imgSrc, key: title }} />
+        ))}
+      </div>
     </div>
   </div>
 );

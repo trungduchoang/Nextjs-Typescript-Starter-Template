@@ -14,7 +14,7 @@ export const capacityInfo = [
   {
     title: "Du học và việc làm",
     description:
-      "Mang trong mình sứ mệnh nâng tầm vị thế con người và sản phẩm Việt. Citynow tâm niệm phải phát triển nguồn lực con người lên trên hết. Vì thế chúng tôi muốn tạo nên một kênh thông tin giới thiệu du học và việc làm giữa Việt Nam và Nhật Bản.",
+      "Mang trong mình sứ mệnh nâng tầm vị thế con người và sản phẩm Việt. Vì thế chúng tôi muốn tạo nên một kênh thông tin giới thiệu du học và việc làm giữa Việt Nam và Nhật Bản.",
     imgSrc: "http://citynow.vn/citynow/images/page/service/logowhite.png",
   },
 ];

@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  padding: 20px 30px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    height: 2px;
+    background: #ffffff;
+    transform: translateX(-50%);
+    content: "";
+  }
+
+  .copyright {
+    white-space: nowrap;
+    margin-right: 15px;
+  }
+
+  .terms {
+    font-size: 0.8rem;
+    font-weight: 400;
+    white-space: nowrap;
+  }
+}

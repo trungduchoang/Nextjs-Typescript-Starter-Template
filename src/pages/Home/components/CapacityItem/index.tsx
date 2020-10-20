@@ -6,7 +6,7 @@ import style from "./CapacityItem.module.scss";
 type IProps = {
   title: string;
   description: string;
-  imgSrc?: string;
+  imgSrc: string;
 };
 
 const CapacityItem = ({ title, description, imgSrc }: IProps) => (
@@ -15,12 +15,8 @@ const CapacityItem = ({ title, description, imgSrc }: IProps) => (
       <img alt={title} src={imgSrc} />
     </div>
     <h3 className={style.title}>{title}</h3>
-    <p className={style.content}>{description}</p>
+    <p className={style.description}>{description}</p>
   </div>
 );
-
-CapacityItem.defaultProps = {
-  imgSrc: undefined,
-};
 
 export default CapacityItem;

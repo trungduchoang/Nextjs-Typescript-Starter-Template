@@ -4,6 +4,7 @@ import React from "react";
 import Slider from "@/components/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
 import Mission from "./mains/Mission";
+import News from "./mains/News";
 // datasource, mocks
 import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
 // others
@@ -14,6 +15,7 @@ const Home = () => (
     <Slider slides={cityNowSlide} />
     <CapacityInfo />
     <Mission />
+    <News />
   </div>
 );
 

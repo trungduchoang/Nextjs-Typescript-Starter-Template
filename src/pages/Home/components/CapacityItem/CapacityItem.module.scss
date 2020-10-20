@@ -1,8 +1,8 @@
 .wrapper {
   display: inline-block;
-  max-width: 350px;
-  padding: 30px 15px 40px;
-  // padding: 0 15px;
+  max-width: 400px;
+  margin: 0 10px;
+  padding: 30px 0 40px;
   text-align: center;
 
   .titleAvatar {
@@ -23,7 +23,8 @@
     font-size: 1.4rem;
   }
 
-  .content {
+  .description {
+    min-height: 150px;
     padding: 0 45px;
     color: #838386;
     text-align: justify;
