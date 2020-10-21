@@ -14,7 +14,7 @@ import { fetchHotelInfo } from "@/services/api/advertisement/fetchHotelInfo";
 // others
 import style from "./Home.module.scss";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const mockResponse = await fetchHotelInfo();
   return { props: { mockResponse } };
 }
