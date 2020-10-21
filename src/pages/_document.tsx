@@ -9,8 +9,6 @@ import Document, {
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    // TODO: html lang: https://github.com/vercel/next.js/issues/9160#issuecomment-643867740
-    // https://nextjs.org/docs/advanced-features/custom-document
     const initialProps = await Document.getInitialProps(ctx);
     return initialProps;
   }

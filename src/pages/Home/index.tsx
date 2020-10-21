@@ -1,6 +1,5 @@
 // libs
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 // components
 import Slider from "@/components/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
