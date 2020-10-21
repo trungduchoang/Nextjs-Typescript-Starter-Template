@@ -7,7 +7,7 @@ const { CLIENT_ENV = "development" } = process.env;
 
 const envInfo: ENV_INFO = {
   development: {
-    BASE_URL: "",
+    BASE_URL: "https://cat-fact.herokuapp.com",
   },
   production: {
     BASE_URL: "",

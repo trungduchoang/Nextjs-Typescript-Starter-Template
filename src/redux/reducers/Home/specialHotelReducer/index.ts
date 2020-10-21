@@ -4,7 +4,7 @@ import { REDUX_ACTION } from "@/types/common";
 
 const initialState = {
   hotelInfo: {
-    happy: "hotel",
+    data: [],
   },
   isLoading: false,
   isError: false,
@@ -13,7 +13,7 @@ const initialState = {
 
 export function specialHotelReducer(
   state = initialState,
-  { type, payload }: REDUX_ACTION
+  { type, payload = {} }: REDUX_ACTION
 ) {
   const { data = {}, error } = payload;
   switch (type) {
@@ -24,10 +24,7 @@ export function specialHotelReducer(
         isError: false,
         error: {},
         hotelInfo: {
-          key: data.key,
-          id: data.id,
-          name: data.hotelName,
-          data: data.date,
+          data: data.all.slice(0, 2),
         },
       };
     case TYPES.FETCH_HOTEL_INFO_LOADING:

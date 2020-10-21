@@ -1,3 +1,4 @@
 import { useStore } from "./useStore";
+import { useAsync } from "./useAsync";
 
-export { useStore };
+export { useStore, useAsync };

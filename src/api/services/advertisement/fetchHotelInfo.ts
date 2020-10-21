@@ -8,7 +8,7 @@ import request from "@/utils/request";
 export const fetchHotelInfo = ({ data = {}, cbSuccess }: ASYNC_ACTION = {}) =>
   request({
     url: ENDPOINTS.ADVERTISEMENT.FETCH_HOTEL_INFO,
-    method: "POST",
+    method: "GET",
     cbSuccess,
     data,
     LOADING_ACTION: TYPES.FETCH_HOTEL_INFO_LOADING,
