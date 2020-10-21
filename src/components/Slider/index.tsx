@@ -39,7 +39,7 @@ const Slider = ({ slides }: { slides: Array<any> }) => {
               isActive: activeSlide === index,
               isPrev: prevSlide === index,
             })}
-            key={slide.companyName}
+            key={slide.key}
           >
             <div className="slideContent">
               <h2 className="slideHeading">

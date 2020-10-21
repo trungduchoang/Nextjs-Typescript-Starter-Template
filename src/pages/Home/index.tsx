@@ -1,14 +1,11 @@
 // libs
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 // components
-import Slider from "@/components/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
 import Mission from "./mains/Mission";
 import News from "./mains/News";
 import ShowMockAPI from "./components/ShowMockAPI";
-// datasource, mocks
-import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
+import CityNowSlide from "./mains/CityNowSlide";
 // actions
 import { fetchHotelInfo } from "@/services/api/advertisement/fetchHotelInfo";
 // others
@@ -21,7 +18,7 @@ export async function getStaticProps() {
 
 const Home = (props) => (
   <div className={style.wrapper}>
-    <Slider slides={cityNowSlide} />
+    <CityNowSlide />
     <CapacityInfo />
     <Mission />
     <News />

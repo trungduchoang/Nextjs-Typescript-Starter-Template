@@ -1,10 +1,14 @@
 .wrapper {
   .toggleBtn {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+
     @media screen and (min-width: 1028px) {
       display: none;
     }
-
-    padding: 4px 10px;
 
     .iconBar {
       display: block;
