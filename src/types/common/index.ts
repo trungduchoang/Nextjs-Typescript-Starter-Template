@@ -1,3 +1,6 @@
+// libs
+import { AxiosRequestConfig } from "axios";
+
 export type ROUTES = Array<{
   pageName: string;
   path: string;
@@ -10,13 +13,10 @@ export interface ENV_INFO {
 
 export interface REDUX_ACTION {
   type: string;
-  payload: {
-    data?: any;
-    error?: any;
-  };
+  payload: any;
 }
 
-export interface ASYNC_ACTION {
+export interface ASYNC_REQUEST {
   data?: { [key: string]: any };
   params?: { [key: string]: any };
   cbSuccess?: (...args: Array<any>) => any;
@@ -45,4 +45,8 @@ export interface REQUEST_TYPE {
   LOADING_ACTION: string;
   SUCCESS_ACTION: string;
   ERROR_ACTION: string;
+}
+
+export interface AXIOS_CONFIG extends AxiosRequestConfig {
+  method: HTTP_METHOD;
 }

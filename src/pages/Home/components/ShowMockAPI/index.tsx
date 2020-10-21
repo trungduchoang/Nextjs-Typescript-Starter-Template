@@ -6,7 +6,7 @@ import { useStore } from "@/hooks";
 // others
 import style from "./ShowMockAPI.module.scss";
 
-const ShowMockAPI = () => {
+const ShowMockAPI = ({ mockResponse }: any) => {
   const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
   const [isShow, setIsShow] = useState(false);
 
@@ -20,9 +20,16 @@ const ShowMockAPI = () => {
       >
         API
       </button>
-      <pre className={classNames(style.content, { [style.isShow]: isShow })}>
-        <code>{JSON.stringify(hotelInfo.data, null, 2)}</code>
-      </pre>
+      <div className={classNames(style.content, { [style.isShow]: isShow })}>
+        <p>Redux:</p>
+        <pre>
+          <code>{JSON.stringify(hotelInfo, null, 2)}</code>
+        </pre>
+        <p>Services API response:</p>
+        <pre>
+          <code>{JSON.stringify(mockResponse, null, 2)}</code>
+        </pre>
+      </div>
     </div>
   );
 };

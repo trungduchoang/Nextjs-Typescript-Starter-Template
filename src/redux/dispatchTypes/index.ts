@@ -1,9 +1,7 @@
-import COMPONENT_TYPES from "./components";
-import SERVICE_TYPES from "./services";
+import HOME from "./Home";
 
 const TYPES = {
-  ...COMPONENT_TYPES,
-  ...SERVICE_TYPES,
+  ...HOME,
 };
 
-export default TYPES;
+export { TYPES };

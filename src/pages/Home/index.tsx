@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 // components
-import Slider from "@/libs/Slider";
+import Slider from "@/components/Slider";
 import CapacityInfo from "./mains/CapacityInfo";
 import Mission from "./mains/Mission";
 import News from "./mains/News";
@@ -14,21 +14,19 @@ import { fetchHotelInfo } from "@/api/services/advertisement/fetchHotelInfo";
 // others
 import style from "./Home.module.scss";
 
-const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchHotelInfo());
-  }, [dispatch]);
+export async function getServerSideProps() {
+  const mockResponse = await fetchHotelInfo();
+  return { props: { mockResponse } };
+}
 
-  return (
-    <div className={style.wrapper}>
-      <Slider slides={cityNowSlide} />
-      <CapacityInfo />
-      <Mission />
-      <News />
-      <ShowMockAPI />
-    </div>
-  );
-};
+const Home = (props) => (
+  <div className={style.wrapper}>
+    <Slider slides={cityNowSlide} />
+    <CapacityInfo />
+    <Mission />
+    <News />
+    <ShowMockAPI mockResponse={props.mockResponse} />
+  </div>
+);
 
 export default Home;

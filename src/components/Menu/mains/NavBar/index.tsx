@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // types
-import { NAV_ITEM } from "@/types/common/NavBar";
+import { NAV_ITEM } from "@/types/components/NavBar";
 // others
 import style from "./NavBar.module.scss";
 

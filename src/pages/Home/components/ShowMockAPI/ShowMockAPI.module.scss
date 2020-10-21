@@ -2,7 +2,10 @@
   position: fixed;
   right: 35px;
   bottom: 15px;
+  z-index: 999;
+  max-height: 80vh;
   padding: 15px;
+  overflow: auto;
   background: #eeeeee;
 
   .content {
