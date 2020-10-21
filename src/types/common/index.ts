@@ -11,7 +11,8 @@ export interface ENV_INFO {
 export interface REDUX_ACTION {
   type: string;
   payload: {
-    data: any;
+    data?: any;
+    error?: any;
   };
 }
 

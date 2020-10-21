@@ -30,11 +30,11 @@ const request = ({
     .then((res: { [key: string]: any }) => {
       dispatch({
         type: SUCCESS_ACTION,
-        payload: res,
+        payload: { data: res },
       });
       if (cbSuccess) {
         cbSuccess({
-          payload: res,
+          data: res,
         });
       }
     })

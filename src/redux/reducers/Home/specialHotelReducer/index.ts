@@ -15,14 +15,20 @@ export function specialHotelReducer(
   state = initialState,
   { type, payload }: REDUX_ACTION
 ) {
+  const { data = {}, error } = payload;
   switch (type) {
     case TYPES.FETCH_HOTEL_INFO_SUCCESS:
       return {
         ...state,
-        hotelInfo: payload.data,
         isLoading: false,
         isError: false,
         error: {},
+        hotelInfo: {
+          key: data.key,
+          id: data.id,
+          name: data.hotelName,
+          data: data.date,
+        },
       };
     case TYPES.FETCH_HOTEL_INFO_LOADING:
       return {
@@ -36,7 +42,7 @@ export function specialHotelReducer(
         ...state,
         isLoading: false,
         isError: true,
-        error: payload,
+        error,
       };
     default:
       return state;
