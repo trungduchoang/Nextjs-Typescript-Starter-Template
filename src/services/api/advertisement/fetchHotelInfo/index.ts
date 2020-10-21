@@ -1,5 +1,5 @@
 // others
-import { ENDPOINTS } from "@/api/endpoints";
+import { ENDPOINTS } from "@/services/endpoints";
 import { axiosFetch } from "@/utils/axios";
 import { hotelInfoMapping } from "./mapping";
 

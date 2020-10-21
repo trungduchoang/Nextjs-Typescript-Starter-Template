@@ -10,7 +10,7 @@ import ShowMockAPI from "./components/ShowMockAPI";
 // datasource, mocks
 import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
 // actions
-import { fetchHotelInfo } from "@/api/services/advertisement/fetchHotelInfo";
+import { fetchHotelInfo } from "@/services/api/advertisement/fetchHotelInfo";
 // others
 import style from "./Home.module.scss";
 
