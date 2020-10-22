@@ -16,7 +16,7 @@ export async function getStaticProps() {
   return { props: { mockResponse } };
 }
 
-const Home = (props) => (
+const Home = (props: { mockResponse: Object }) => (
   <div className={style.wrapper}>
     <CityNowSlide />
     <CapacityInfo />

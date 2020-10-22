@@ -15,7 +15,5 @@ const requestHandler = appRoutes.getRequestHandler(nextApp);
 
 nextApp.prepare().then(() => {
   const server = express();
-  server.use(requestHandler).listen(port, (err) => {
-    if (err) throw err;
-  });
+  server.use(requestHandler).listen(port);
 });
