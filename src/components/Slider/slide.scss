@@ -301,7 +301,7 @@
 
 .sliderControl {
   position: absolute;
-  top: 52%;
+  top: 58%;
   left: 5%;
   z-index: 100;
   width: 50px;
@@ -317,11 +317,11 @@
 
 .sliderControl::before {
   position: absolute;
-  top: 52%;
+  top: 58%;
   left: 50%;
   width: 20px;
   height: 20px;
-  margin-top: -10px;
+  margin-top: -13px;
   margin-left: -10px;
   border: 2px solid #000000;
   border-right: none;
