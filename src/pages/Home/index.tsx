@@ -7,7 +7,7 @@ import News from "./mains/News";
 import ShowMockAPI from "./components/ShowMockAPI";
 import CityNowSlide from "./mains/CityNowSlide";
 // actions
-import { fetchHotelInfo } from "@/services/api/advertisement/fetchHotelInfo";
+import { fetchHotelInfo } from "@/services/api/advertisement";
 // others
 import style from "./Home.module.scss";
 

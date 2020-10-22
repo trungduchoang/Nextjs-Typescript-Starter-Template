@@ -1,0 +1,1 @@
+export { fetchHotelInfo } from "./fetchHotelInfo";

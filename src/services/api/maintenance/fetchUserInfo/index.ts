@@ -1,10 +1,10 @@
 // others
 import { ENDPOINTS } from "@/services/endpoints";
 import { axiosFetch } from "@/utils/axios";
-import { hotelInfoMapping } from "./mapping";
+import { userInfoMapping } from "./mapping";
 
-export const fetchHotelInfo = () =>
+export const fetchUserInfo = () =>
   axiosFetch({
     url: ENDPOINTS.ADVERTISEMENT.FETCH_HOTEL_INFO,
     method: "GET",
-  }).then(hotelInfoMapping);
+  }).then(userInfoMapping);
