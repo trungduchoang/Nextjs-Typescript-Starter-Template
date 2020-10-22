@@ -1,22 +1,22 @@
 .sliderWrapper {
   position: relative;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   color: #ffffff;
-}
 
-.sliderContainer {
-  position: relative;
-  height: 100%;
-}
+  .sliderContainer {
+    position: relative;
+    height: 100%;
+  }
 
-.slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 }
 
 .slide.isActive {
@@ -38,7 +38,7 @@
 .slideSubHeading {
   margin-bottom: 20px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 24px;
   letter-spacing: 2px;
   transform: translateY(20px);
   opacity: 0;
@@ -53,6 +53,7 @@
 
 .slideHeading {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
   font-size: 55px;
   letter-spacing: 12px;
@@ -301,7 +302,7 @@
 .sliderControl {
   position: absolute;
   top: 52%;
-  left: 4%;
+  left: 5%;
   z-index: 100;
   width: 50px;
   height: 50px;
@@ -330,7 +331,7 @@
 }
 
 .sliderControlRight {
-  right: 4%;
+  right: 5%;
   left: auto;
   transform: translateX(50px);
 }
