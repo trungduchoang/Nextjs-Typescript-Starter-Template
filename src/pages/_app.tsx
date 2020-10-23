@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { AppProps } from "next/app";
 // components
 import DocumentHead from "@/libs/DocumentHead";
-import AppLayout from "../components/AppLayout";
+import AppLayout from "@/views/layout/AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
 import "@/styles/main.css";
