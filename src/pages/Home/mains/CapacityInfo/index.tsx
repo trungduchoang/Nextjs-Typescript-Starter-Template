@@ -4,7 +4,7 @@ import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import CapacityItem from "../../components/CapacityItem";
 // datasource, mocks
-import { capacityInfo } from "@/mocks/Home/capacityInfo";
+import { capacityInfo } from "@/mocks/Home";
 // others
 import style from "./CapacityInfo.module.scss";
 

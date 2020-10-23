@@ -1,1 +1,1 @@
-export { fetchUserInfo } from "./fetchUserInfo";
+export * from "./fetchUserInfo";

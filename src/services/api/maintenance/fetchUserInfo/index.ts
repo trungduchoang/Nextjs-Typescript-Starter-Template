@@ -1,7 +1,8 @@
+// mapping
+import { userInfoMapping } from "./mapping";
 // others
 import { ENDPOINTS } from "@/services/endpoints";
 import { axiosFetch } from "@/utils/axios";
-import { userInfoMapping } from "./mapping";
 
 export const fetchUserInfo = () =>
   axiosFetch({

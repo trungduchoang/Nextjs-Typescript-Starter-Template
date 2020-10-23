@@ -1,7 +1,8 @@
+// mapping
+import { hotelInfoMapping } from "./mapping";
 // others
 import { ENDPOINTS } from "@/services/endpoints";
 import { axiosFetch } from "@/utils/axios";
-import { hotelInfoMapping } from "./mapping";
 
 export const fetchHotelInfo = () =>
   axiosFetch({

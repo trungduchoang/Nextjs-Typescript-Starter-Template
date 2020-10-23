@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // dataSources, mocks
-import { navigationItems } from "../../dataSources/navigationItems";
+import { navigationItems } from "@/dataSources/CommonHeader";
 // components
 import Menu from "@/components/Menu";
 

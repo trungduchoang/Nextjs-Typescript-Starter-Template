@@ -3,7 +3,7 @@ import React from "react";
 // components
 import Slider from "@/components/Slider";
 // datasource, mocks
-import { cityNowSlide } from "@/mocks/Home/cityNowSlide";
+import { cityNowSlide } from "@/mocks/Home";
 // others
 import style from "./CityNowSlide.module.scss";
 

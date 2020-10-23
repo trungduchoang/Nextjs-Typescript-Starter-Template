@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // mocks
-import { branchInfo } from "@/mocks/common/branchInfo";
+import { branchInfo } from "@/mocks/common";
 // components
 import BranchInfo from "../../components/BranchInfo";
 // others

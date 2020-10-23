@@ -1,1 +1,1 @@
-export { fetchHotelInfo } from "./fetchHotelInfo";
+export * from "./fetchHotelInfo";

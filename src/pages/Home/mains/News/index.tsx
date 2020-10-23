@@ -4,7 +4,7 @@ import React from "react";
 import SectionTitle from "../../components/SectionTitle";
 import NewsItem from "../../components/NewsItem";
 // datasource, mocks
-import { news } from "@/mocks/Home/news";
+import { news } from "@/mocks/Home";
 // others
 import style from "./News.module.scss";
 
