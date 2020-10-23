@@ -1,8 +1,8 @@
 // libs
 import React from "react";
 // components
-import CommonHeader from "@/components/CommonHeader";
-import CommonFooter from "@/components/CommonFooter";
+import CommonHeader from "@/pages/CommonHeader";
+import CommonFooter from "@/pages/CommonFooter";
 
 const AppLayout = ({ children }: { children: JSX.Element }) => (
   <>
