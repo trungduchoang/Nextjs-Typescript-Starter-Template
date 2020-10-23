@@ -1,7 +1,7 @@
 // libs
 import React from "react";
 // components
-import Slider from "@/libs/Slider";
+import Slider from "@/views/libs/Slider";
 // datasource, mocks
 import { cityNowSlide } from "@/mocks/Home";
 // others

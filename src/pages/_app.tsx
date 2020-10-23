@@ -3,7 +3,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { AppProps } from "next/app";
 // components
-import DocumentHead from "@/libs/DocumentHead";
+import DocumentHead from "@/views/libs/DocumentHead";
 import AppLayout from "@/views/layout/AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
