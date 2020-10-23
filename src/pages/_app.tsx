@@ -3,7 +3,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import { AppProps } from "next/app";
 // components
-import DocumentHead from "@/views/libs/DocumentHead";
+import ConfigHead from "@/configs/ConfigHead";
 import AppLayout from "@/views/layout/AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
@@ -16,7 +16,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     <Provider store={store}>
       <AppLayout>
         <>
-          <DocumentHead />
+          <ConfigHead />
           <Component {...pageProps} />
         </>
       </AppLayout>

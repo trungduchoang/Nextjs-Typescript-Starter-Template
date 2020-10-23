@@ -2,7 +2,7 @@
 import React from "react";
 import Head from "next/head";
 
-const DocumentHead = ({
+const ConfigHead = ({
   title = "NextJS Application",
   children,
 }: {
@@ -19,4 +19,4 @@ const DocumentHead = ({
   </Head>
 );
 
-export default DocumentHead;
+export default ConfigHead;
