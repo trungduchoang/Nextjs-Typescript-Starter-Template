@@ -1,6 +1,8 @@
 // libs
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
+// others
+import style from "./slider.module.scss";
 
 const IMAGE_PARTS = 4;
 const AUTO_CHANGE_TIME = 4000;
@@ -31,35 +33,37 @@ const Slider = ({ slides }: { slides: Array<any> }) => {
   });
 
   return (
-    <div className={classNames("sliderWrapper", { isReady })}>
-      <div className="sliderContainer">
+    <div
+      className={classNames(style.sliderWrapper, { [style.isReady]: isReady })}
+    >
+      <div className={style.sliderContainer}>
         {slides.map((slide, index) => (
           <div
-            className={classNames("slide", {
-              isActive: activeSlide === index,
-              isPrev: prevSlide === index,
+            className={classNames(style.slide, {
+              [style.isActive]: activeSlide === index,
+              [style.isPrev]: prevSlide === index,
             })}
             key={slide.key}
           >
-            <div className="slideContent">
-              <h2 className="slideHeading">
+            <div className={style.slideContent}>
+              <h2 className={style.slideHeading}>
                 {slide.companyName
                   .split("")
                   .map((letter: string, i: number) => (
                     // eslint-disable-next-line react/no-array-index-key
-                    <span className="letter" key={i}>
+                    <span className={style.letter} key={i}>
                       {letter === " " ? <>&nbsp;</> : letter}
                     </span>
                   ))}
               </h2>
-              <h3 className="slideSubHeading">{slide.description}</h3>
-              <p className="readmore">read more</p>
+              <h3 className={style.slideSubHeading}>{slide.description}</h3>
+              <p className={style.readmore}>read more</p>
             </div>
-            <div className="bgPartContainer">
+            <div className={style.bgPartContainer}>
               {[...Array(IMAGE_PARTS).keys()].map((id) => (
-                <div className="bgPart" key={id}>
+                <div className={style.bgPart} key={id}>
                   <div
-                    className="bgPartInner"
+                    className={style.bgPartInner}
                     style={{ backgroundImage: `url(${slide.imgSrc})` }}
                   />
                 </div>
@@ -68,9 +72,9 @@ const Slider = ({ slides }: { slides: Array<any> }) => {
           </div>
         ))}
       </div>
-      <div className="sliderControl" onClick={goToPrevSlide} />
+      <div className={style.sliderControl} onClick={goToPrevSlide} />
       <div
-        className="sliderControl sliderControlRight"
+        className={classNames(style.sliderControl, style.sliderControlRight)}
         onClick={goToNextSlide}
       />
     </div>
