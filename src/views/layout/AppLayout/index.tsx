@@ -2,7 +2,7 @@
 import React from "react";
 // components
 import CommonHeader from "@/views/layout/CommonHeader";
-import CommonFooter from "@/pages/CommonFooter";
+import CommonFooter from "@/views/layout/CommonFooter";
 
 const AppLayout = ({ children }: { children: JSX.Element }) => (
   <>
