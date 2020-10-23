@@ -15,6 +15,6 @@ export const cityNowSlide = [
     key: 3,
     companyName: "DỊCH VỤ",
     description: "UY TÍN",
-    imgSrc: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/moscow.jpg",
+    imgSrc: "http://citynow.jp/citynow/images/page/slides/city04.jpg",
   },
 ];

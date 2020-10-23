@@ -5,12 +5,14 @@ $bg-color-lg-screens: #e4e3e2;
 .wrapper {
   position: relative;
 
-  .navInner {
-    position: absolute;
-    right: 0;
-    z-index: 999;
-    width: 200px;
-    background: #ffffff;
+  @media screen and (max-width: 1028px) {
+    .navInner {
+      position: absolute;
+      right: 0;
+      z-index: 999;
+      width: 200px;
+      background: #ffffff;
+    }
   }
 }
 
