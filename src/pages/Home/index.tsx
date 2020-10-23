@@ -1,11 +1,11 @@
 // libs
-import React from "@/components/Home/components/SectionTitle/node_modules/@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import React from "react";
 // components
-import CapacityInfo from "./mains/CapacityInfo";
-import Mission from "./mains/Mission";
-import News from "./mains/News";
-import ShowMockAPI from "../../components/Home/components/ShowMockAPI";
-import CityNowSlide from "./mains/CityNowSlide";
+import CapacityInfo from "@/components/Home/mains/CapacityInfo";
+import Mission from "@/components/Home/mains/Mission";
+import News from "@/components/Home/mains/News";
+import CityNowSlide from "@/components/Home/mains/CityNowSlide";
+import ShowMockAPI from "@/components/Home/components/ShowMockAPI";
 // actions
 import { fetchHotelInfo } from "@/services/api/advertisement";
 // others

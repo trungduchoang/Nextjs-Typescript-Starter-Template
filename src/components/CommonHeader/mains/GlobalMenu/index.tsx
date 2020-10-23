@@ -1,9 +1,9 @@
 // libs
-import React from "@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import React from "react";
 // dataSources, mocks
 import { navigationItems } from "@/dataSources/CommonHeader";
 // components
-import Menu from "@/components/Menu";
+import Menu from "@/libs/Menu";
 
 const GlobalMenu = () => <Menu dataSource={navigationItems} />;
 

@@ -1,6 +1,6 @@
 // libs
-import React, { useEffect, useState } from "@/components/Home/components/SectionTitle/node_modules/@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
-import classNames from "@/components/Home/components/ShowMockAPI/node_modules/classnames";
+import React, { useEffect, useState } from "react";
+import classNames from "classnames";
 // others
 import style from "./slider.module.scss";
 

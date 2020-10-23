@@ -1,5 +1,5 @@
 // libs
-import { useState, useEffect, useCallback } from "@/components/Home/components/SectionTitle/node_modules/@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import { useState, useEffect, useCallback } from "react";
 
 export const useAsync = (asyncFunction, immediate = true) => {
   const [pending, setPending] = useState(false);

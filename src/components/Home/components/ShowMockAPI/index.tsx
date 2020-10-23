@@ -1,5 +1,5 @@
 // libs
-import React, { useState } from "@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import React, { useState } from "react";
 import classNames from "classnames";
 // hooks
 import { useStore } from "@/hooks";

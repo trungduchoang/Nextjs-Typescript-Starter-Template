@@ -1,5 +1,5 @@
 // libs
-import React from "@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import React from "react";
 // others
 import style from "./Logo.module.scss";
 

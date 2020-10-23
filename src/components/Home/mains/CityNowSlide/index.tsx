@@ -1,7 +1,7 @@
 // libs
-import React from "@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
+import React from "react";
 // components
-import Slider from "@/components/Slider";
+import Slider from "@/libs/Slider";
 // datasource, mocks
 import { cityNowSlide } from "@/mocks/Home";
 // others
