@@ -1,10 +1,10 @@
 // libs
-import React from "react";
+import React from "@/components/Home/components/SectionTitle/node_modules/@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
 // components
 import CapacityInfo from "./mains/CapacityInfo";
 import Mission from "./mains/Mission";
 import News from "./mains/News";
-import ShowMockAPI from "./components/ShowMockAPI";
+import ShowMockAPI from "../../components/Home/components/ShowMockAPI";
 import CityNowSlide from "./mains/CityNowSlide";
 // actions
 import { fetchHotelInfo } from "@/services/api/advertisement";

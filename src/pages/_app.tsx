@@ -1,10 +1,10 @@
 // libs
-import React from "react";
+import React from "@/components/CommonFooter/components/BranchInfo/node_modules/react";
 import { Provider } from "react-redux";
 import { AppProps } from "next/app";
 // components
 import DocumentHead from "@/components/DocumentHead";
-import AppLayout from "./AppLayout";
+import AppLayout from "../components/AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
 import "@/styles/main.css";

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "@/components/Home/components/SectionTitle/node_modules/@/components/CommonHeader/mains/Logo/node_modules/@/components/CommonFooter/components/BranchInfo/node_modules/react";
 import Document, {
   Html,
   Head,
