@@ -1,8 +1,8 @@
 // libs
 import React from "react";
 // components
-import Logo from "@/components/CommonHeader/mains/Logo";
-import GlobalMenu from "@/components/CommonHeader/mains/GlobalMenu";
+import Logo from "./mains/Logo";
+import GlobalMenu from "./mains/GlobalMenu";
 // others
 import style from "./CommonHeader.module.scss";
 
