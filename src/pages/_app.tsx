@@ -7,7 +7,6 @@ import DocumentHead from "@/components/DocumentHead";
 import AppLayout from "./AppLayout";
 // others
 import { useInitStore } from "@/configs/Redux/store";
-import "@/components/Menu/Menu.scss";
 import "@/styles/main.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
