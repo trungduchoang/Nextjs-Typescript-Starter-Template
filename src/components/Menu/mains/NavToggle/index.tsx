@@ -3,14 +3,14 @@ import React from "react";
 // others
 import style from "./NavToggle.module.scss";
 
-const NavToggle = () => (
-  <span className={style.wrapper}>
+const NavToggle = ({ onClick }: { onClick: (event: any) => void }) => (
+  <div className={style.wrapper} onClick={onClick}>
     <div className={style.toggleBtn}>
       <div className={style.iconBar}></div>
       <div className={style.iconBar}></div>
       <div className={style.iconBar}></div>
     </div>
-  </span>
+  </div>
 );
 
 export default NavToggle;

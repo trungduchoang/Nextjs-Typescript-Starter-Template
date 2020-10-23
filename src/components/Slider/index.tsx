@@ -43,12 +43,14 @@ const Slider = ({ slides }: { slides: Array<any> }) => {
           >
             <div className="slideContent">
               <h2 className="slideHeading">
-                {slide.companyName.split("").map((letter, i) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <span className="letter" key={i}>
-                    {letter === " " ? <>&nbsp;</> : letter}
-                  </span>
-                ))}
+                {slide.companyName
+                  .split("")
+                  .map((letter: string, i: number) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <span className="letter" key={i}>
+                      {letter === " " ? <>&nbsp;</> : letter}
+                    </span>
+                  ))}
               </h2>
               <h3 className="slideSubHeading">{slide.description}</h3>
               <p className="readmore">read more</p>

@@ -6,7 +6,7 @@ import { useStore } from "@/hooks";
 // others
 import style from "./ShowMockAPI.module.scss";
 
-const ShowMockAPI = ({ mockResponse }: any) => {
+const ShowMockAPI = ({ mockResponse }: { mockResponse: Object }) => {
   const { hotelInfo } = useStore(({ Home }) => Home.specialHotelReducer);
   const [isShow, setIsShow] = useState(false);
 

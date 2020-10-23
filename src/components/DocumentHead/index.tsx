@@ -2,9 +2,12 @@
 import React from "react";
 import Head from "next/head";
 
-const DocumentHead: React.FC<{ title?: string; children?: any }> = ({
+const DocumentHead = ({
   title = "NextJS Application",
   children,
+}: {
+  title?: string;
+  children?: any;
 }) => (
   <Head>
     <meta charSet="utf-8" />
