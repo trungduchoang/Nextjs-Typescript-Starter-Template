@@ -1,8 +1,8 @@
 // libs
 import React from "react";
 // components
-import DataArea from "@/components/CommonFooter/mains/DataArea";
-import Copyright from "@/components/CommonFooter/mains/Copyright";
+import DataArea from "./mains/DataArea";
+import Copyright from "./mains/Copyright";
 // others
 import styles from "./CommonFooter.module.scss";
 
