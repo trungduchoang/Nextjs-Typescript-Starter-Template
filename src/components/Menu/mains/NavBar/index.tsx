@@ -9,9 +9,11 @@ import style from "./NavBar.module.scss";
 const NavBar = ({
   menuItems,
   isVisibled,
+  toggleMenuVisible,
 }: {
   menuItems: NAV_ITEM[];
   isVisibled: boolean;
+  toggleMenuVisible: Function;
 }) => (
   <div className={style.wrapper}>
     <nav className={style.navInner}>
@@ -22,7 +24,13 @@ const NavBar = ({
         })}
       >
         {menuItems.map(({ label, href }) => (
-          <li className={style.menuItem} key={label}>
+          <li
+            className={style.menuItem}
+            key={label}
+            onClick={() => {
+              toggleMenuVisible();
+            }}
+          >
             <a href={href}>{label}</a>
           </li>
         ))}

@@ -15,7 +15,11 @@ const Menu = ({ dataSource }: { dataSource: NAV_ITEM[] }) => {
   return (
     <div>
       <NavToggle onClick={toggleMenuVisible} />
-      <NavBar menuItems={dataSource} isVisibled={visible} />
+      <NavBar
+        menuItems={dataSource}
+        isVisibled={visible}
+        toggleMenuVisible={toggleMenuVisible}
+      />
     </div>
   );
 };
