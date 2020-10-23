@@ -1,3 +1,5 @@
+$BACKGROUND_PARTS: 4;
+
 .sliderWrapper {
   position: relative;
   height: 100%;
@@ -7,74 +9,137 @@
   .sliderContainer {
     position: relative;
     height: 100%;
-  }
 
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
-}
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
 
-.slide.isActive {
-  pointer-events: auto;
-}
-
-.slideContent {
-  position: relative;
-  z-index: 6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.slideSubHeading {
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 2px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.slide.isActive .slideSubHeading {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 0.65s;
-}
-
-.slideHeading {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  font-size: 55px;
-  letter-spacing: 12px;
-  text-align: center;
-}
-
-.slideHeading .letter {
-  display: block;
-  color: #ffffff;
-  transform: translateY(-60px);
-  opacity: 0;
-  transition: all 0.33333s;
-
-  @for $i from 1 through 6 {
-    &:nth-child(#{$i}) {
-      transition-delay: $i * 0.1s - 0.1s;
+      &.isActive {
+        pointer-events: auto;
+      }
     }
   }
 
-  &:nth-child(n + 7) {
-    transition-delay: 0.6s;
+  .slideContent {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    line-height: 1;
+    text-transform: uppercase;
+
+    .slideHeading {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      font-size: 55px;
+      letter-spacing: 12px;
+      text-align: center;
+
+      .letter {
+        display: block;
+        color: #ffffff;
+        transform: translateY(-60px);
+        opacity: 0;
+        transition: all 0.33333s;
+
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.1s - 0.1s;
+          }
+        }
+
+        &:nth-child(n + 7) {
+          transition-delay: 0.6s;
+        }
+      }
+    }
+
+    .slideSubHeading {
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-size: 24px;
+      letter-spacing: 2px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    .readmore {
+      position: relative;
+      font-size: 14px;
+      text-transform: lowercase;
+      transform: translateY(-20px);
+      backface-visibility: hidden;
+      cursor: pointer;
+      opacity: 0;
+      transition: 0.5s;
+
+      &::before {
+        position: absolute;
+        top: -3px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 6px);
+        background: rgba(255, 255, 255, 0.4);
+        transform: scaleX(0.3);
+        transform-origin: 0 50%;
+        transition: transform 0.3s;
+        content: "";
+      }
+
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .sliderControl {
+    position: absolute;
+    top: 58%;
+    left: 5%;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translateX(-50px);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s 1s;
+
+    &::before {
+      position: absolute;
+      top: 58%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin-top: -13px;
+      margin-left: -10px;
+      border: 2px solid #000000;
+      border-right: none;
+      border-bottom: none;
+      transform: translateX(5px) rotate(-45deg);
+      content: "";
+    }
+
+    &.sliderControlRight {
+      right: 5%;
+      left: auto;
+      transform: translateX(50px);
+
+      &::before {
+        transform: translateX(-5px) rotate(135deg);
+      }
+    }
   }
 }
 
@@ -82,53 +147,35 @@
   transform: translateY(60px);
 }
 
-.slide.isActive .slideHeading .letter {
-  transform: translateY(0);
-  opacity: 1;
+.slide.isActive {
+  pointer-events: auto;
 
-  @for $i from 1 through 6 {
-    &:nth-child(#{$i}) {
-      transition-delay: 0.23333s + $i * 0.1;
-    }
+  .slideHeading .letter {
+    transform: translateY(0);
+    opacity: 1;
 
-    &:nth-child(n + 7) {
-      transition-delay: 0.93333s;
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition-delay: 0.23333s + $i * 0.1;
+      }
+
+      &:nth-child(n + 7) {
+        transition-delay: 0.93333s;
+      }
     }
   }
-}
 
-.readmore {
-  position: relative;
-  font-size: 14px;
-  text-transform: lowercase;
-  transform: translateY(-20px);
-  backface-visibility: hidden;
-  cursor: pointer;
-  opacity: 0;
-  transition: 0.5s;
-}
+  .slideSubHeading {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.65s;
+  }
 
-.slide.isActive .readmore {
-  transform: translateY(0);
-  opacity: 1;
-  transition-delay: 0.65s;
-}
-
-.readmore::before {
-  position: absolute;
-  top: -3px;
-  left: -2px;
-  width: calc(100% + 4px);
-  height: calc(100% + 6px);
-  background: rgba(255, 255, 255, 0.4);
-  transform: scaleX(0.3);
-  transform-origin: 0 50%;
-  transition: transform 0.3s;
-  content: "";
-}
-
-.readmore:hover::before {
-  transform: scaleX(1);
+  .readmore {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 0.65s;
+  }
 }
 
 .bgPartContainer {
@@ -138,174 +185,84 @@
   display: flex;
   width: 100%;
   height: 100%;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    content: "";
+  }
+
+  .bgPart {
+    position: relative;
+    width: 25%;
+    height: 100%;
+
+    .bgPartInner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 0 0;
+      transition: transform 0.5s ease-in-out;
+
+      &::before {
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        background-image: inherit;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0;
+        transition: opacity 0.25s;
+        content: "";
+      }
+    }
+  }
 }
 
-.bgPartContainer::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.1);
-  content: "";
-}
+@for $i from 1 through $BACKGROUND_PARTS {
+  $offsetIndex: $BACKGROUND_PARTS - $i;
 
-.bgPart {
-  position: relative;
-  width: 25%;
-  height: 100%;
-}
+  .bgPart:nth-child(#{$i}) .bgPartInner {
+    z-index: $offsetIndex;
+    transform: translateX($i * -32.5%);
+    transition-delay: $offsetIndex * 0.08s;
+  }
 
-.bgPartInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: 0 0;
-  transition: transform 0.5s ease-in-out;
-}
+  .slide.isActive .bgPart:nth-child(#{$i}) .bgPartInner {
+    transition-delay: 0.2s + $i * 0.08s;
+  }
 
-.bgPartInner::before {
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  background-image: inherit;
-  background-position: center center;
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.25s;
-  content: "";
-}
+  .bgPart:nth-child(#{$i}) .bgPartInner::before {
+    $prevI: $i - 1;
 
-.bgPart:nth-child(1) .bgPartInner {
-  z-index: 3;
-  transform: translateX(-32.5%);
-  transition-delay: 0.24s;
-}
+    left: $prevI * -25vw;
+    transition-delay: 0.365s;
+  }
 
-.slide.isActive .bgPart:nth-child(1) .bgPartInner {
-  transition-delay: 0.28s;
-}
-
-.bgPart:nth-child(1) .bgPartInner::before {
-  left: 0;
-  transition-delay: 0.365s;
-}
-
-.slide.isActive .bgPart:nth-child(1) .bgPartInner::before {
-  transition-delay: 0.28s;
-}
-
-.bgPart:nth-child(2) .bgPartInner {
-  z-index: 2;
-  transform: translateX(-65%);
-  transition-delay: 0.16s;
-}
-
-.slide.isActive .bgPart:nth-child(2) .bgPartInner {
-  transition-delay: 0.36s;
-}
-
-.bgPart:nth-child(2) .bgPartInner::before {
-  left: -25vw;
-  transition-delay: 0.285s;
-}
-
-.slide.isActive .bgPart:nth-child(2) .bgPartInner::before {
-  transition-delay: 0.36s;
-}
-
-.bgPart:nth-child(3) .bgPartInner {
-  z-index: 1;
-  transform: translateX(-97.5%);
-  transition-delay: 0.08s;
-}
-
-.slide.isActive .bgPart:nth-child(3) .bgPartInner {
-  transition-delay: 0.44s;
-}
-
-.bgPart:nth-child(3) .bgPartInner::before {
-  left: -50vw;
-  transition-delay: 0.205s;
-}
-
-.slide.isActive .bgPart:nth-child(3) .bgPartInner::before {
-  transition-delay: 0.44s;
-}
-
-.bgPart:nth-child(4) .bgPartInner {
-  z-index: 0;
-  transform: translateX(-130%);
-  transition-delay: 0s;
-}
-
-.slide.isActive .bgPart:nth-child(4) .bgPartInner {
-  transition-delay: 0.52s;
-}
-
-.bgPart:nth-child(4) .bgPartInner::before {
-  left: -75vw;
-  transition-delay: 0.125s;
-}
-
-.slide.isActive .bgPart:nth-child(4) .bgPartInner::before {
-  transition-delay: 0.52s;
+  .slide.isActive .bgPart:nth-child(#{$i}) .bgPartInner::before {
+    transition-delay: 0.2s + $i * 0.08s;
+  }
 }
 
 .slide.isActive .bgPartInner {
   transform: translateX(0);
   transition-timing-function: ease;
+
+  &::before {
+    opacity: 1;
+  }
 }
 
-.slide.isActive .bgPartInner::before {
-  opacity: 1;
-}
-
-.sliderControl {
-  position: absolute;
-  top: 58%;
-  left: 5%;
-  z-index: 100;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  transform: translateX(-50px);
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.5s 1s;
-}
-
-.sliderControl::before {
-  position: absolute;
-  top: 58%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin-top: -13px;
-  margin-left: -10px;
-  border: 2px solid #000000;
-  border-right: none;
-  border-bottom: none;
-  transform: translateX(5px) rotate(-45deg);
-  content: "";
-}
-
-.sliderControlRight {
-  right: 5%;
-  left: auto;
-  transform: translateX(50px);
-}
-
-.sliderControlRight::before {
-  transform: translateX(-5px) rotate(135deg);
-}
-
-.sliderWrapper.isReady .sliderControl {
-  transform: translateX(0);
-  opacity: 1;
+.sliderWrapper.isReady {
+  .sliderControl {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
