@@ -1,18 +1,10 @@
 require("dotenv").config();
 const path = require("path");
-const Dotenv = require("dotenv-webpack");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const configureWebpack = (config, { dev }) => {
   config.plugins = config.plugins || [];
-
-  config.plugins.push(
-    new Dotenv({
-      path: path.join(__dirname, ".env"),
-      systemvars: true,
-    })
-  );
 
   if (config.resolve.plugins) {
     config.resolve.plugins.push(new TsconfigPathsPlugin());
