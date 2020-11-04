@@ -1,0 +1,37 @@
+.wrapper {
+  $bgColor: #082c44;
+
+  background-color: $bgColor;
+
+  .coreValueTitle h1 {
+    color: #ffffff;
+    font-size: 2.7rem;
+
+    &::before {
+      background: #ffffff;
+    }
+  }
+
+  .coreValueItem {
+    max-width: 350px;
+    margin: 0 15px 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+    h2 {
+      margin: 50px 0 20px;
+      color: $bgColor;
+      font-weight: 500;
+      font-size: 1.7rem;
+    }
+
+    p {
+      color: #222222;
+      font-size: 1.1rem;
+    }
+
+    img {
+      border-radius: 0;
+    }
+  }
+}

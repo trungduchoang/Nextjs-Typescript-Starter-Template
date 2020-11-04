@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 90px 7%;
+  text-align: center;
+  background-image: url("http://citynow.vn/citynow/images/page/introduction/intro_home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  .title {
+    margin: 10px 0;
+    color: #ffffff;
+  }
+
+  .description {
+    max-width: 900px;
+    margin: 5px auto;
+    padding: 0 5px;
+    color: #fdfdfd;
+  }
+}

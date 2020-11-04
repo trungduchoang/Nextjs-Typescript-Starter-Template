@@ -1,0 +1,7 @@
+// common
+@import "@/styles/variables.scss";
+
+.wrapper {
+  height: calc(100vh - #{$headerHeight});
+  padding: 0;
+}

@@ -1,0 +1,4 @@
+*.js linguist-language=TypeScript
+*.css linguist-detectable=false
+* -text
+* text=auto eol=lf

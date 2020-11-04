@@ -1,0 +1,69 @@
+{
+  "name": "nextjs-application",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "nodemon",
+    "start:production": "ts-node --project tsconfig.server.json -r tsconfig-paths/register dist",
+    "build": "next build && tsc --project tsconfig.server.json",
+    "prettier": "prettier -c \"**/src/**\" --write",
+    "eslint:fix": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./src --max-warnings=0",
+    "stlint:fix": "stylelint ./src --syntax scss --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint:fix && npm run stlint:fix"
+    }
+  },
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "axios": "^0.20.0",
+    "dotenv-webpack": "^1.7.0",
+    "express": "^4.17.1",
+    "next": "^10.0.0",
+    "node-sass": "^4.14.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "ts-node": "^8.4.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
+    "autoprefixer": "^9.7.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^10.0.0",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "husky": "^4.3.0",
+    "nodemon": "^1.19.4",
+    "prettier": "^2.1.1",
+    "prettier-eslint": "^11.0.0",
+    "redux-devtools-extension": "^2.13.8",
+    "stylelint": "^11.1.1",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.12.1",
+    "tsconfig-paths": "^3.9.0"
+  }
+}

@@ -1,0 +1,14 @@
+.wrapper {
+  padding: 50px 0;
+  background-color: #f6f6f6;
+
+  .inner {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    .itemsContainer {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
