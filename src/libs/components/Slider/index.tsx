@@ -1,13 +1,14 @@
 // libs
 import React, { useEffect, useState } from "react";
 import classNames from "classnames";
+import { BackgroundImage } from "../BackgroundImage";
 // others
 import style from "./Slider.module.scss";
 
 type SLIDE = {
   title?: string;
   description?: string;
-  imgSrc?: string;
+  imgSrc: string;
   readmoreLink?: string;
   [key: string]: any;
 };
@@ -78,9 +79,9 @@ export const Slider = ({
             <div className={style.bgPartContainer}>
               {[...Array(IMAGE_PARTS).keys()].map((id) => (
                 <div className={style.bgPart} key={id}>
-                  <div
+                  <BackgroundImage
+                    src={slide.imgSrc}
                     className={style.bgPartInner}
-                    style={{ backgroundImage: `url(${slide.imgSrc})` }}
                   />
                 </div>
               ))}
