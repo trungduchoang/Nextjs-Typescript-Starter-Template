@@ -27,6 +27,9 @@ export type GET_STATIC_PROPS = {
   props: PAGE_PROPS;
 };
 
+type LoadingValue = "lazy" | "eager" | undefined;
+type LayoutValue = "fill" | "fixed" | "intrinsic" | "responsive" | undefined;
+
 export type IMAGE_PROPS = Omit<
 JSX.IntrinsicElements["img"],
 "src" | "srcSet" | "ref" | "width" | "height" | "loading"
@@ -34,17 +37,22 @@ JSX.IntrinsicElements["img"],
   src: string;
   quality?: number | string;
   priority?: boolean;
-  loading?: "lazy" | "eager" | undefined;
+  loading?: LoadingValue;
   unoptimized?: boolean;
 } & (
   | {
-    width: number;
-    height: number;
-    unsized?: false;
+    width?: never;
+    height?: never;
+    unsized: true;
   }
   | {
-    width?: number;
-    height?: number;
-    unsized: true;
+    width?: never;
+    height?: never;
+    layout: "fill";
+  }
+  | {
+    width: number | string;
+    height: number | string;
+    layout?: Exclude<LayoutValue, "fill">;
   }
 );
