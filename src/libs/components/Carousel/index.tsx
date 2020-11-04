@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { BackgroundImage } from "../BackgroundImage";
 // others
-import style from "./Slider.module.scss";
+import style from "./Carousel.module.scss";
 
 type SLIDE = {
   title?: string;
@@ -16,7 +16,7 @@ type SLIDE = {
 const IMAGE_PARTS = 4;
 const AUTO_CHANGE_TIME = 4000;
 
-export const Slider = ({
+export const Carousel = ({
   slides,
   slideKey = "key",
 }: {
