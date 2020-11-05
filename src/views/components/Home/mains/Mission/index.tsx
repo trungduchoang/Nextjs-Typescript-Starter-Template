@@ -6,10 +6,7 @@ import style from "./Mission.module.scss";
 
 const Mission = () => (
   <section className={style.wrapper}>
-    <BackgroundImage
-      src="http://citynow.vn/citynow/images/page/introduction/intro_home.jpg"
-      className={style.background}
-    >
+    <BackgroundImage src="/images/mission.webp" className={style.background}>
       <h1 className={style.title}>
         CITYNOW - NÂNG TẦM CÔNG NGHỆ, GIẢM KHOẢNG CÁCH GIỮA VIỆT NAM VÀ THẾ GIỚI
       </h1>

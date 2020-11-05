@@ -11,7 +11,7 @@ export const cityNowSlide = [
     key: 2,
     title: "THAM GIA",
     description: "VỚI CHÚNG TÔI",
-    imgSrc: "http://citynow.jp/citynow/images/page/slides/city04.jpg",
+    imgSrc: "/images/slide2.webp",
     readmoreLink: "#",
   },
   {
