@@ -1,8 +1,8 @@
 // libs
 import { combineReducers } from "redux";
 // reducers
-import { pageProps } from "./pageProps";
+import { pageData } from "./pageData";
 
 export const About = combineReducers({
-  pageProps,
+  pageData,
 });

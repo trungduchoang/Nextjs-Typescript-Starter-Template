@@ -9,7 +9,7 @@ import style from "./ShowMockAPI.module.scss";
 const LazyComponent = dynamic(() => import("../LazyComponent"));
 
 const ShowMockAPI = () => {
-  const { pageProps } = useStore({ page: "Home" });
+  const { pageData } = useStore({ page: "Home" });
   const [isShow, setIsShow] = useState(false);
 
   return (
@@ -22,7 +22,7 @@ const ShowMockAPI = () => {
       >
         API
       </button>
-      {isShow && <LazyComponent pageProps={pageProps} />}
+      {isShow && <LazyComponent pageData={pageData} />}
     </div>
   );
 };
