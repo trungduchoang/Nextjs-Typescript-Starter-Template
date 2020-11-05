@@ -6,7 +6,7 @@ require("dotenv").config();
 const { PORT = "3000", NODE_ENV } = process.env;
 
 const port = parseInt(PORT, 10);
-const isDev = NODE_ENV !== "production";
+const isDev = NODE_ENV === "development";
 
 if (isDev)
   console.log(
