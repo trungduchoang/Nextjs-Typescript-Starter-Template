@@ -4,3 +4,4 @@ export * from "./SectionTitle";
 export * from "./Menu";
 export * from "./Redirect";
 export * from "./BackgroundImage";
+export * from "./Slider";

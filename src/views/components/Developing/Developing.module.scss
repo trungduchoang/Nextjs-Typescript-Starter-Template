@@ -1,0 +1,16 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+  padding: 15px;
+  background-color: #ffffff;
+
+  .sliderWrapper {
+    width: 100%;
+    max-width: 1280px;
+    height: 150px;
+  }
+}
