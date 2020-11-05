@@ -12,8 +12,8 @@ const CompanyInfo = () => (
         <Image
           alt="company CEO"
           src="http://citynow.vn/citynow/images/page/introduction/boss.png"
-          width="300"
-          height="300"
+          width={300}
+          height={300}
         />
       </div>
       <div className={classNames(style.infoCard, style.info)}>

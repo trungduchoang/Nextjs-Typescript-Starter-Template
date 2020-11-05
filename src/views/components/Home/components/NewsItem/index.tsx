@@ -18,6 +18,7 @@ const NewsItem = ({ title, time, img }: IProps) => (
         src={img.src}
         width={img.width}
         height={img.height}
+        quality={90}
       />
     </div>
     <h2 className={style.title}>{title}</h2>

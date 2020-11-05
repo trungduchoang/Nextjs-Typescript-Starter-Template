@@ -35,7 +35,7 @@ JSX.IntrinsicElements["img"],
 "src" | "srcSet" | "ref" | "width" | "height" | "loading"
 > & {
   src: string;
-  quality?: number | string;
+  quality?: number;
   priority?: boolean;
   loading?: LoadingValue;
   unoptimized?: boolean;
@@ -51,8 +51,8 @@ JSX.IntrinsicElements["img"],
     layout: "fill";
   }
   | {
-    width: number | string;
-    height: number | string;
+    width: number;
+    height: number;
     layout?: Exclude<LayoutValue, "fill">;
   }
 );
