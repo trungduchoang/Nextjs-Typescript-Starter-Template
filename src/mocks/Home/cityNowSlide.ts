@@ -18,7 +18,7 @@ export const cityNowSlide = [
     key: 3,
     title: "DỊCH VỤ",
     description: "UY TÍN",
-    imgSrc: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/singapore.jpg",
+    imgSrc: "/images/slide3.webp",
     readmoreLink: "#",
   },
 ];
