@@ -6,6 +6,9 @@ import { NAV_ITEM } from "@/types/components/NavBar";
 import NavBar from "./mains/NavBar";
 import NavToggle from "./mains/NavToggle";
 
+/**
+ * Menu
+ */
 export const Menu = ({ dataSource }: { dataSource: NAV_ITEM[] }) => {
   const [visible, setVisible] = useState(false);
 

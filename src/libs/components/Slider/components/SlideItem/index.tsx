@@ -5,12 +5,16 @@ import classNames from "classnames";
 // others
 import style from "./SlideItem.module.scss";
 
-export const SlideItem = ({
-  imgSrc,
-  isActive
-}: {
-  imgSrc: string;isActive:boolean
-}) => (
+type PROPS = {
+  /** imgSrc */
+  imgSrc: string;
+  /** isActive */
+  isActive: boolean;
+};
+/**
+ * SlideItem
+ */
+const SlideItem = ({ imgSrc, isActive }: PROPS) => (
   <div className={style.wrapper}>
     <div
       className={classNames(style.inner, {
@@ -21,3 +25,5 @@ export const SlideItem = ({
     </div>
   </div>
 );
+
+export default SlideItem;

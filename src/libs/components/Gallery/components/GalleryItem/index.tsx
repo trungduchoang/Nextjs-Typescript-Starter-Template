@@ -8,14 +8,22 @@ import { IMAGE_PROPS } from "@/types/common";
 import style from "./GalleryItem.module.scss";
 
 type IProps = {
+  /** title */
   title: string;
+  /** description */
   description: string;
+  /** HTML <img /> attributes */
   img: IMAGE_PROPS;
+  /** imgStyle */
   imgStyle?: "round" | "cover";
+  /** wrapperClass */
   wrapperClass?: string;
+  /** avatarWrapperClass */
   avatarWrapperClass?: string;
 };
-
+/**
+ * GalleryItem
+ */
 export const GalleryItem = ({
   title,
   description,

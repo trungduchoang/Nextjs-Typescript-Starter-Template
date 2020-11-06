@@ -1,6 +1,6 @@
 .wrapper {
   position: absolute;
-  top: 58%;
+  top: 52%;
   left: 5%;
   z-index: 100;
   width: 50px;
@@ -31,7 +31,6 @@
   &.right {
     right: 5%;
     left: auto;
-    transform: translateX(50px);
 
     &::before {
       transform: translateX(-5px) rotate(135deg);

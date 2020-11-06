@@ -3,13 +3,16 @@ import React from "react";
 // components
 import ControlBtn from "../ControlBtn";
 
-const NextBtn = ({
-  setActiveSlide,
-  numberOfSlide,
-}: {
+type PROPS = {
+  /** parent setState callback */
   setActiveSlide: (cb: (T: number) => number) => void;
+  /** numberOf slides */
   numberOfSlide: number;
-}) => {
+};
+/**
+ * PrevBtn
+ */
+const PrevBtn = ({ setActiveSlide, numberOfSlide }: PROPS) => {
   const goToPreviousSlide = () => {
     setActiveSlide((currentSlideIndex) => {
       let prevIndex = currentSlideIndex - 1;
@@ -18,8 +21,7 @@ const NextBtn = ({
     });
   };
 
-  return <ControlBtn onClick={goToPreviousSlide} />;
+  return <ControlBtn onClick={goToPreviousSlide} position="right" />;
 };
 
-export default NextBtn;
-/// //////////Copy PrevBtn form outside index.tsx to done this
+export default PrevBtn;
