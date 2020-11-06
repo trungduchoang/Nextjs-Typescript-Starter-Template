@@ -1,0 +1,7 @@
+.wrapper {
+  display: none;
+
+  &.isActive {
+    display: block;
+  }
+}

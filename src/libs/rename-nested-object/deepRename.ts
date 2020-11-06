@@ -17,7 +17,7 @@ export const deepRename = ({
   schema: ANY_OBJECT;
 }) => {
   const result: ANY_OBJECT = {};
-  Object.keys(schema).forEach((key: string) => {
+  Object.keys(schema).forEach((key) => {
     const schema$key = schema[key];
     const input$key = input[key];
 
