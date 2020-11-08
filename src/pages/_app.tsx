@@ -10,6 +10,8 @@ import { useInitStore } from "@/configs/Redux";
 import { interceptRequest } from "@/configs/Axios";
 // others
 import { generateInitialState } from "@/utils";
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.css";
 import "@/styles/global.css";
 
 const App = ({ Component, pageProps }: AppProps) => {

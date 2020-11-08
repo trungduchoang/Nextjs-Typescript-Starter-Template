@@ -1,16 +1,17 @@
 .wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100vw;
-  height: 100vh;
-  padding: 15px;
-  background-color: #ffffff;
+  width: 100%;
 
-  .sliderWrapper {
-    width: 100%;
-    max-width: 1280px;
-    height: 150px;
+  .mapouter {
+    position: relative;
+    width: 600px;
+    height: 500px;
+    text-align: right;
+  }
+
+  .gmap_canvas {
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    background: none !important;
   }
 }
