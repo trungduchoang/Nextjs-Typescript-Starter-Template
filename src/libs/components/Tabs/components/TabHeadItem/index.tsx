@@ -21,6 +21,6 @@ export const TabHeadItem = ({ name, isActive, onClick }: PROPS) => (
     className={classNames(style.wrapper, { [style.isActive]: isActive })}
     onClick={onClick}
   >
-    <h2>{name}</h2>
+    {name}
   </div>
 );

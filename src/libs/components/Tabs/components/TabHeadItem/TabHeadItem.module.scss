@@ -1,19 +1,29 @@
 .wrapper {
+  position: relative;
   display: inline-block;
   min-width: 120px;
-  padding: 12px 15px;
-  font-size: 0.875rem;
+  padding: 5px 15px;
+  color: #222222;
+  font-size: 1rem;
+  text-align: center;
   background-color: #ffffff;
-  border-bottom: solid #2b76a7 2px;
 
-  &.isActive {
-    background-color: #cccccc;
-    border-bottom-color: #cccccc;
+  &::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    border-bottom: solid #2b76a7 3px;
+    content: "";
   }
 
-  h2 {
-    display: inline-block;
-    width: auto;
-    margin: 0 auto;
+  &.isActive {
+    color: #333333;
+    background-color: #cccccc;
+    border-bottom-color: #cccccc;
+
+    &::after {
+      display: none;
+    }
   }
 }

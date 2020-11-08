@@ -1,14 +1,14 @@
 // libs
 import React from "react";
-import { TabPane, Tabs } from "@/libs/components";
-import dynamic from "next/dynamic";
+// import { TabPane, Tabs } from "@/libs/components";
+// import dynamic from "next/dynamic";
 // components
 // import GeneralInfo from "./mains/GeneralInfo";
 import HotelSlider from "./mains/HotelSlides";
 // others
 import style from "./Developing.module.scss";
 
-const LazyHome = dynamic(() => import("../Home"));
+// const LazyHome = dynamic(() => import("../Home"));
 
 const Developing = () => (
   <div className={style.wrapper}>
@@ -31,14 +31,16 @@ const Developing = () => (
     {/* <GeneralInfo /> */}
     <div className={style.mainWrapper}>
       <HotelSlider />
-      <Tabs defaultActiveTab={1}>
-        <TabPane id={1} name="サンプル">
-          Tab 1
-        </TabPane>
-        <TabPane id={2} name="サンプル 2">
-          <LazyHome />
-        </TabPane>
-      </Tabs>
+      {/* <div className={style.tabWrapper}>
+        <Tabs defaultActiveTab={1}>
+          <TabPane id={1} name="サンプル">
+            Tab 1
+          </TabPane>
+          <TabPane id={2} name="サンプル 2">
+            <LazyHome />
+          </TabPane>
+        </Tabs>
+      </div> */}
     </div>
   </div>
 );

@@ -6,17 +6,27 @@ import { NAV_ITEM } from "@/types/components/NavBar";
 // others
 import style from "./NavBar.module.scss";
 
+type PROPS = {
+  /** menuItems */
+  menuItems: NAV_ITEM[];
+  /** Navigation Bar is visible/not visible */
+  isVisibled: boolean;
+  /** Show/Hide Navigation Bar */
+  toggleMenuVisible: Function;
+  /** position of Dropdown Menu */
+  position: "left" | "right";
+};
+/**
+ * NavBar
+ */
 const NavBar = ({
   menuItems,
   isVisibled,
   toggleMenuVisible,
-}: {
-  menuItems: NAV_ITEM[];
-  isVisibled: boolean;
-  toggleMenuVisible: Function;
-}) => (
+  position,
+}: PROPS) => (
   <div className={style.wrapper}>
-    <nav className={style.navInner}>
+    <nav className={classNames(style.navInner, style[position])}>
       <ul
         className={classNames(style.menu, {
           [style.menuVisible]: isVisibled,

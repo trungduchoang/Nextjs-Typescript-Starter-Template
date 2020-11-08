@@ -29,9 +29,16 @@
 @media screen and (max-width: 1028px) {
   .navInner {
     position: absolute;
-    right: 0;
     width: 200px;
     background: #ffffff;
+
+    &.left {
+      right: 0;
+    }
+
+    &.right {
+      left: 0;
+    }
 
     .menu {
       flex-direction: column;

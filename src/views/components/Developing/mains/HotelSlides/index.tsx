@@ -12,17 +12,20 @@ import style from "./HotelSlider.module.scss";
  */
 const HotelSlider = () => (
   <div className={style.wrapper}>
-    <Slider>
-      {cityNowSlide.map(({ imgSrc, key, description }) => (
-        <Image
-          src={imgSrc}
-          key={key}
-          alt={description}
-          width={384}
-          height={216}
-        />
-      ))}
-    </Slider>
+    <div className={style.inner}>
+      <Slider>
+        {cityNowSlide.map(({ imgSrc, key, description }) => (
+          <Image
+            src={imgSrc}
+            key={key}
+            alt={description}
+            width={384}
+            height={216}
+            layout="responsive"
+          />
+        ))}
+      </Slider>
+    </div>
   </div>
 );
 

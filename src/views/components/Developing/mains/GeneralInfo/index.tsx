@@ -23,7 +23,7 @@ const GeneralInfo = () => (
         <div>11/06</div>
         <div>17:03</div>
       </div>
-      <div className={style.hotelName}>ハッピー</div>
+      <h1 className={style.hotelName}>ハッピー</h1>
     </div>
     <div className={style.favoriteIcon}>
       <Icon name="Heart" size={28} />

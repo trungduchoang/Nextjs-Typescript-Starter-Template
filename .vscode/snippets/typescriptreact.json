@@ -1,17 +1,32 @@
 {
   "import icon": {
     "prefix": "_importIcon",
-    "body": ["// icons", "import { ${1:Icon name} } from '@ant-design/icons';"],
+    "body": [
+      "// icons",
+      "import { ${1:Icon name} } from '@ant-design/icons';"
+    ],
     "description": "import icon"
   },
   "lazy components snippets": {
     "prefix": "_useDynamic",
-    "body": ["const Lazy${1: ComponentName} = dynamic(() => import('../${1: ComponentName}'));"],
-    "description": "import icon"
+    "body": [
+      "const Lazy${1: ComponentName} = dynamic(() => import('../${1: ComponentName}'));"
+    ],
+    "description": "lazy components snippets"
   },
   "import next/dynamic": {
     "prefix": "_importDynamic",
-    "body": ["import dynamic from 'next/dynamic';"],
-    "description": "import icon"
+    "body": [
+      "import dynamic from 'next/dynamic';"
+    ],
+    "description": "import next/dynamic"
+  },
+  "import local css module": {
+    "prefix": "_importStyleimportCSS",
+    "body": [
+      "// others",
+      "import style from './${1: PageName}.module.scss';"
+    ],
+    "description": "import local css module"
   }
 }
