@@ -1,6 +1,6 @@
 {
   "import icon": {
-    "prefix": "`#importIcon",
+    "prefix": "_importIcon",
     "body": ["// icons", "import { ${1:Icon name} } from '@ant-design/icons';"],
     "description": "import icon"
   }

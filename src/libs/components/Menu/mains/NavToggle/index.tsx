@@ -1,16 +1,16 @@
 // libs
 import React from "react";
+// icons
+import { MenuOutlined } from "@ant-design/icons";
 // others
 import style from "./NavToggle.module.scss";
 
 const NavToggle = ({ onClick }: { onClick: (event: any) => void }) => (
-  <div className={style.wrapper} onClick={onClick}>
-    <div className={style.toggleBtn}>
-      <div className={style.iconBar}></div>
-      <div className={style.iconBar}></div>
-      <div className={style.iconBar}></div>
-    </div>
-  </div>
+  <MenuOutlined
+    className={style.toggleBtn}
+    translate={null}
+    onClick={onClick}
+  />
 );
 
 export default NavToggle;
