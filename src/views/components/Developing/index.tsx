@@ -3,7 +3,7 @@ import React from "react";
 import { TabPane, Tabs } from "@/libs/components";
 import dynamic from "next/dynamic";
 // components
-import GeneralInfo from "./mains/GeneralInfo";
+// import GeneralInfo from "./mains/GeneralInfo";
 import HotelSlider from "./mains/HotelSlides";
 // others
 import style from "./Developing.module.scss";
@@ -28,7 +28,7 @@ const Developing = () => (
         />
       </div>
     </div> */}
-    <GeneralInfo />
+    {/* <GeneralInfo /> */}
     <div className={style.mainWrapper}>
       <HotelSlider />
       <Tabs defaultActiveTab={1}>
