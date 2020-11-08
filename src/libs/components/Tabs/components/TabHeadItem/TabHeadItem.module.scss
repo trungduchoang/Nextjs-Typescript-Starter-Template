@@ -1,0 +1,19 @@
+.wrapper {
+  display: inline-block;
+  min-width: 120px;
+  padding: 12px 15px;
+  font-size: 0.875rem;
+  background-color: #ffffff;
+  border-bottom: solid #2b76a7 2px;
+
+  &.isActive {
+    background-color: #cccccc;
+    border-bottom-color: #cccccc;
+  }
+
+  h2 {
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+  }
+}

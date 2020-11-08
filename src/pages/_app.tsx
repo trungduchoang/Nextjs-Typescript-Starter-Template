@@ -12,7 +12,7 @@ import { interceptRequest } from "@/configs/Axios";
 import { generateInitialState } from "@/utils";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.css";
-import "@/styles/global.css";
+import "@/styles/classless.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const initialState = generateInitialState.call(pageProps);

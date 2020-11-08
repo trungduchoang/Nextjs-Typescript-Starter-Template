@@ -1,30 +1,20 @@
 // libs
 import React from "react";
-import Slider from "react-slick";
-import Image from "next/image";
 import { TabPane, Tabs } from "@/libs/components";
-// mocks
-import { cityNowSlide } from "@/mocks/Home";
+import dynamic from "next/dynamic";
+// components
+import GeneralInfo from "./mains/GeneralInfo";
+import HotelSlider from "./mains/HotelSlides";
 // others
 import style from "./Developing.module.scss";
 
+const LazyHome = dynamic(() => import("../Home"));
+
 const Developing = () => (
   <div className={style.wrapper}>
-    <div className={style.sliderWrapper}>
-      <Slider>
-        {cityNowSlide.map(({ imgSrc, key, description }) => (
-          <Image
-            src={imgSrc}
-            key={key}
-            alt={description}
-            width={325}
-            height={230}
-          />
-        ))}
-      </Slider>
-    </div>
-    <div className={style.mapouter}>
-      <div className={style.gmap_canvas}>
+    {/*
+    <div className={style.mapWrapper}>
+      <div className={style.mapInner}>
         <iframe
           title="happy hotel address"
           width="600"
@@ -37,14 +27,16 @@ const Developing = () => (
           marginWidth={0}
         />
       </div>
-    </div>
-    <div>
-      <Tabs defaultActiveKey={2}>
-        <TabPane key={1} id={1}>
+    </div> */}
+    <GeneralInfo />
+    <div className={style.mainWrapper}>
+      <HotelSlider />
+      <Tabs defaultActiveTab={1}>
+        <TabPane id={1} name="サンプル">
           Tab 1
         </TabPane>
-        <TabPane key={2} id={2}>
-          Tab 2
+        <TabPane id={2} name="サンプル 2">
+          <LazyHome />
         </TabPane>
       </Tabs>
     </div>

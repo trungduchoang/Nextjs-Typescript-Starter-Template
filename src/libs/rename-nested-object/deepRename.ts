@@ -52,5 +52,6 @@ export const deepRename = ({
     }
     if (typeof schema$key === "string") result[schema$key] = input$key;
   });
+
   return result;
 };

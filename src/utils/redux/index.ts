@@ -7,5 +7,6 @@ export function generateInitialState(this: PAGE_PROPS) {
   const initialState = isInitialPageFromAPI
     ? { [page]: { pageData: apiResponse.data } }
     : {};
+
   return initialState;
 }

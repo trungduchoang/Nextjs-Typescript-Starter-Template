@@ -52,5 +52,6 @@ export function preprocessResponse(
     typeof processStrategy === "function"
       ? processStrategy(renamedData)
       : renamedData;
+
   return preprocessedData;
 }

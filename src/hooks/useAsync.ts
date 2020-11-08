@@ -17,6 +17,7 @@ export const useAsync = (
     setPending(true);
     setValue(null);
     setError(null);
+
     return asyncFunction()
       .then((response: any) => setValue(response))
       .catch((error: any) => setError(error))

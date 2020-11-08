@@ -18,6 +18,7 @@ const withRequestError = ({
   if (isError && isAPIError) {
     console.error(`URL: ${baseURL}${url}`);
     console.error(`Request Payload: \n${JSON.stringify(reqPayload, null, 2)}`);
+
     return (
       <pre className={style.wrapper}>
         <h1>{`Error ${status} - ${statusText}`}</h1>

@@ -1,6 +1,6 @@
+/* eslint-disable react/no-unused-prop-types */
 // libs
 import React from "react";
-import classNames from "classnames";
 // contexts
 import { useTabsContext } from "../../TabsContext";
 // others
@@ -11,19 +11,15 @@ type PROPS = {
   children: any;
   /** unique id */
   id: string | number;
+  /** name of Tab */
+  name: string | JSX.Element;
 };
 /**
  * TabPane
  */
 export const TabPane = ({ children, id }: PROPS) => {
   const { activeTab } = useTabsContext();
-  return (
-    <div
-      className={classNames(style.wrapper, {
-        [style.isActive]: activeTab === id,
-      })}
-    >
-      {children}
-    </div>
-  );
+  const isActive = activeTab === id;
+
+  return <div className={style.wrapper}>{isActive && children}</div>;
 };

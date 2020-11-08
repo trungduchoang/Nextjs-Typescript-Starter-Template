@@ -28,6 +28,7 @@ module.exports = {
   images: {
     domains: [
       "citynow.vn",
+      "www.linkpicture.com",
       "citynow.jp",
       "cutewallpaper.org",
       "s3-us-west-2.amazonaws.com",

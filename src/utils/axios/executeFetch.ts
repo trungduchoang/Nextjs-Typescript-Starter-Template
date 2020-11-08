@@ -36,6 +36,7 @@ export function executeFetch(this: AXIOS_CONFIG) {
         processStrategy,
       });
       if (cbSuccess) cbSuccess(response, data);
+
       return { data, isError: false };
     })
     .catch((err: AxiosError) => {

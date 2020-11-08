@@ -1,5 +1,5 @@
 // common
-@import "@/styles/variables.scss";
+@import "@/styles/common.scss";
 
 .wrapper {
   position: fixed;
@@ -8,11 +8,12 @@
   z-index: 999;
   display: flex;
   align-items: center;
+  width: 100%;
   height: $headerHeight;
   padding: 0 16px;
   background-color: #ffffff;
 
-  .iconshare {
-    color: #266a99;
+  .shareIcon {
+    margin-left: auto;
   }
 }
