@@ -1,0 +1,26 @@
+.wrapper {
+  .title {
+    padding: 10px 20px;
+    color: #118bee;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #ffffff;
+    border-top: 1.5px solid #cccccc;
+    border-bottom: 1.5px solid #cccccc;
+  }
+
+  .equips {
+    padding: 10px 10px;
+
+    .item {
+      display: inline-block;
+      margin: 2px;
+      padding: 5px;
+      color: #118bee;
+      font-size: 0.8rem;
+      background-color: #ffffff;
+      border: 2px solid #118bee;
+      border-radius: 10px;
+    }
+  }
+}

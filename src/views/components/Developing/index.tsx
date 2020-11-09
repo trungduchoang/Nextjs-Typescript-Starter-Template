@@ -9,6 +9,7 @@ import SubDescription from "./mains/SubDescription";
 // others
 import style from "./Developing.module.scss";
 
+const HotelEquipment = dynamic(() => import("./mains/HotelEquipment"));
 const LazyPriceInfo = dynamic(() => import("./mains/PriceInfo"));
 
 const Developing = () => (
@@ -36,7 +37,7 @@ const Developing = () => (
       <div className={style.tabWrapper}>
         <Tabs defaultActiveTab={2}>
           <TabPane id={1} name="サンプル">
-            Tab 1
+            <HotelEquipment />
           </TabPane>
           <TabPane id={2} name="サンプル 2">
             <LazyPriceInfo />
