@@ -1,14 +1,15 @@
 .wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 20px;
   background-color: #ffffff;
   border-bottom: 2px solid #f0f0f0;
 
-  .information {
-    color: #979797;
-    font-weight: 600;
-    font-size: 1rem;
+  .address {
+    p {
+      margin-bottom: 2px;
+      color: #979797;
+      font-size: 0.8rem;
+    }
   }
 }
