@@ -7,7 +7,7 @@ import style from "./ReviewItem.module.scss";
 
 const ReviewItem = () => (
   <div className={style.wrapper}>
-    <TitleDescription />
+    <TitleDescription isBackground />
     <div className={style.description}>
       <p>自そ符41品げ秀課ちたぽ低記ナヘ重内むざッ経自将リサ安桂キニヒ球</p>
     </div>

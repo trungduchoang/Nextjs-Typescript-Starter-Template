@@ -1,9 +1,18 @@
 .wrapper {
+  width: 85px;
+  margin-bottom: 5px;
+
+  h2 {
+    color: #000000;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+.isBackground {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100px;
-  margin-bottom: 5px;
   background-color: #1082d1;
 
   h2 {

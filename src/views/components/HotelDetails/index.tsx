@@ -11,7 +11,7 @@ import style from "./HotelDetailsLayout.module.scss";
 
 const HotelDetailsLayout = () => (
   <div className={style.wrapper}>
-    <div className={style.innder}>
+    <div className={style.inner}>
       <HotelSlide />
       <TabbarInfo />
       <ReviewArea />
