@@ -20,11 +20,15 @@ type PROPS = {
 /**
  * WeekPrices
  */
-const WeekPrices = ({ priceByWeek }: PROPS) => (
-  <div className={style.wrapper}>
-    {priceByWeek.map(({ week }) => (
-      <div>{week}</div>
-    ))}
-  </div>
-);
+const WeekPrices = ({ priceByWeek }: PROPS) => {
+  const tempPriceByWeek = priceByWeek.map((item, i) => ({ ...item, key: i }));
+
+  return (
+    <div className={style.wrapper}>
+      {tempPriceByWeek.map(({ week, key }) => (
+        <div key={key}>{week}</div>
+      ))}
+    </div>
+  );
+};
 export default WeekPrices;

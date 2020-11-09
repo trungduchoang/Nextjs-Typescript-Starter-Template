@@ -17,7 +17,7 @@ const PriceInfo = () => {
   return (
     <div className={style.wrapper}>
       {hotelPricesByKind.map((kindInfo) => (
-        <HotelKind {...kindInfo} />
+        <HotelKind {...kindInfo} key={kindInfo.name} />
       ))}
     </div>
   );
