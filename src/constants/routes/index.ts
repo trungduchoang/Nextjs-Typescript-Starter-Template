@@ -1,5 +1,4 @@
 export default {
   HOME: "/",
-  ABOUT: "/about",
-  DEVELOPING: "/developing",
+  HOTEL_DETAIL: "/hotel-detail",
 };

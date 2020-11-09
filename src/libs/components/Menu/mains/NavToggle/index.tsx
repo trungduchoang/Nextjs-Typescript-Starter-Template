@@ -6,7 +6,14 @@ import { ONCLICK } from "@/types/common";
 // others
 import style from "./NavToggle.module.scss";
 
-const NavToggle = ({ onClick }: { onClick: ONCLICK }) => (
+type PROPS = {
+  /** onClick event */
+  onClick: ONCLICK;
+};
+/**
+ * NavToggle
+ */
+const NavToggle = ({ onClick }: PROPS) => (
   <Icon
     className={style.toggleBtn}
     name="Menu"

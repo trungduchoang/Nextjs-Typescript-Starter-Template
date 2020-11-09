@@ -39,11 +39,18 @@ export type API_REQUEST<PAYLOAD> = {
 };
 
 export type AXIOS_CONFIG = {
+  /** request url - string / callback */
   url: string | ((payload: PREPROCESSED_REQUEST_PAYLOAD) => string);
+  /** http method */
   method: HTTP_METHOD;
+  /** request payload */
   payload?: ANY_OBJECT;
+  /** callback on success */
   cbSuccess?: CALLBACK_SUCCESS;
+  /** callback on error */
   cbError?: CALLBACK_ERROR;
+  /** preprocess API response */
   resPreprocessor: RESPONSE_PREPROCESSOR;
+  /** preprocess API request payload */
   reqPreprocessor?: (props: any) => PREPROCESSED_REQUEST_PAYLOAD;
 } & Omit<AxiosRequestConfig, "url">;

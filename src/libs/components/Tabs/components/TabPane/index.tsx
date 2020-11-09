@@ -15,7 +15,7 @@ type PROPS = {
   name: string | JSX.Element;
 };
 /**
- * TabPane
+ * TabPane - Container of tab content
  */
 export const TabPane = ({ children, id }: PROPS) => {
   const { activeTab } = useTabsContext();

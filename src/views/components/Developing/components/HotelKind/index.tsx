@@ -28,7 +28,7 @@ const HotelKind = ({ name, remarks, priceByWeek }: PROPS) => (
   <div className={style.wrapper}>
     <h2 className={style.name}>{name}</h2>
     <WeekPrices priceByWeek={priceByWeek} />
-    <p className={style.remarks}>{remarks}</p>
+    <pre className={style.remarks}>{remarks}</pre>
   </div>
 );
 

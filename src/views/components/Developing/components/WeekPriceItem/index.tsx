@@ -21,10 +21,10 @@ const WeekPriceItem = ({ week, prices }: PROPS) => (
   <div className={style.wrapper}>
     <p className={style.week}>{week}</p>
     {prices.map(({ price, timeZone }) => (
-      <>
+      <div key={price + timeZone}>
         <p className={style.timeZone}>{timeZone}</p>
         <p className={style.price}>{price}</p>
-      </>
+      </div>
     ))}
   </div>
 );

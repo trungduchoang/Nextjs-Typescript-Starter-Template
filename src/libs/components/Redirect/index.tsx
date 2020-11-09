@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 type PROPS = {
-  /** address to redirect */
+  /** address to redirect to */
   to: string;
 };
 /**

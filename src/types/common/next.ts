@@ -5,20 +5,11 @@ interface ANY_OBJECT {
   [key: string]: any;
 }
 
-export type REQUEST_ERROR_INFO = {
-  status?: number;
-  statusText?: string;
-  data?: ANY_OBJECT;
-  url?: string;
-  baseURL?: string;
-};
-
 export type PAGE_PROPS = {
   page: PAGES_REDUCER;
   apiResponse: {
     data?: ANY_OBJECT;
     isError?: boolean;
-    errorInfo?: REQUEST_ERROR_INFO | any;
     reqPayload?: PREPROCESSED_REQUEST_PAYLOAD;
   };
 };

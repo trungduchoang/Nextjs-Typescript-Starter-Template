@@ -16,7 +16,7 @@ type PROPS = {
   }[];
 };
 /**
- * TabHead
+ * TabHead -  Tab Header for navigation
  */
 export const TabHead = ({ dataSource }: PROPS) => {
   const { activeTab, setActiveTab } = useTabsContext();
@@ -28,7 +28,9 @@ export const TabHead = ({ dataSource }: PROPS) => {
           key={id}
           name={name}
           isActive={id === activeTab}
-          onClick={() => { setActiveTab(id); }}
+          onClick={() => {
+            setActiveTab(id);
+          }}
         />
       ))}
     </div>

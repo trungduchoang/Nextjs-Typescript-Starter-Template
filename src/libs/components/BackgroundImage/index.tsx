@@ -16,7 +16,7 @@ type PROPS = {
   };
 };
 /**
- * BackgroundImage
+ * BackgroundImage - Lazyload Image in CSS background-image
  */
 export const BackgroundImage = ({
   src,

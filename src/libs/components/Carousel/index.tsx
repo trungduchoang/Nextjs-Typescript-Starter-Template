@@ -26,7 +26,7 @@ type PROPS = {
   slideKey?: string;
 };
 /**
- * Carousel - Slider with full width only
+ * Carousel - Slider with full width only and Image-Part Effect
  */
 export const Carousel = ({ slides, slideKey = "key" }: PROPS) => {
   const totalSlide = slides.length;

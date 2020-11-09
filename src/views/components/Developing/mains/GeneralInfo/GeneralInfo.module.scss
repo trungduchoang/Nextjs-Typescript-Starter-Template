@@ -6,12 +6,13 @@
   position: fixed;
   top: $headerHeight;
   left: 0;
+  z-index: 9;
   display: flex;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
   height: $generalInfoHeight;
   padding: 0 10px;
+  background-color: #ffffff;
   border-top: #eaeaea 2px solid;
   border-bottom: #eaeaea 2px solid;
 

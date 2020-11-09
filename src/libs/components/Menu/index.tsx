@@ -10,7 +10,7 @@ type PROPS = {
   /** menuItems props */
   dataSource: NAV_ITEM[];
   /** position of Dropdown Menu */
-  position?: "right" | "left"
+  position?: "right" | "left";
 };
 /**
  * Menu

@@ -1,6 +1,11 @@
 // libs
 import { useState, useEffect, useCallback } from "react";
 
+/**
+ * useAsync
+ * @param asyncFunction
+ * @param immediate
+ */
 export const useAsync = (
   asyncFunction: Function,
   immediate: Boolean = true
