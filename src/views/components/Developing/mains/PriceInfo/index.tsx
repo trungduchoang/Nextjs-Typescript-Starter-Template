@@ -16,10 +16,12 @@ const PriceInfo = () => {
 
   return (
     <div className={style.wrapper}>
+      <div className={style.paymentType}>現金</div>
       {hotelPricesByKind.map((kindInfo) => (
         <HotelKind {...kindInfo} key={kindInfo.name} />
       ))}
     </div>
   );
 };
+
 export default PriceInfo;

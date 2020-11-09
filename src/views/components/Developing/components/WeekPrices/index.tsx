@@ -1,5 +1,6 @@
 // libs
 import React from "react";
+import WeekPriceItem from "../WeekPriceItem";
 // others
 import style from "./WeekPrices.module.scss";
 
@@ -21,12 +22,12 @@ type PROPS = {
  * WeekPrices
  */
 const WeekPrices = ({ priceByWeek }: PROPS) => {
-  const tempPriceByWeek = priceByWeek.map((item, i) => ({ ...item, key: i }));
+  const tempPriceByWeek = priceByWeek.map((week, i) => ({ week, key: i }));
 
   return (
     <div className={style.wrapper}>
       {tempPriceByWeek.map(({ week, key }) => (
-        <div key={key}>{week}</div>
+        <WeekPriceItem key={key} {...week} />
       ))}
     </div>
   );
