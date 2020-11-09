@@ -32,6 +32,7 @@ module.exports = {
       "citynow.jp",
       "cutewallpaper.org",
       "s3-us-west-2.amazonaws.com",
+      "gcpdev.happyhotel.jp",
     ],
   },
   reactStrictMode: true,

@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 // libs
-import { AxiosError, AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 // types
 import { AXIOS_CONFIG } from "@/types/common";
 // others
@@ -35,21 +35,33 @@ export function executeFetch(this: AXIOS_CONFIG) {
         schema,
         processStrategy,
       });
-      if (cbSuccess) cbSuccess(response, data);
+
+      if (cbSuccess) cbSuccess(data);
 
       return { data, isError: false };
     })
-    .catch((err: AxiosError) => {
-      if (cbError) cbError(err);
-      const isAPIError = !!err.response?.status;
-      const errorInfo = isAPIError && {
-        status: err.response?.status,
-        statusText: err.response?.statusText,
-        data: err.response?.data,
-        url: err.response?.config.url,
-        baseURL: err.response?.config.baseURL,
-      };
+    .catch((err: any) => {
+      // if (cbError) cbError(err);
+      // const isAPIError = !!err.response?.status;
+      // const errorInfo = isAPIError && {
+      //   status: err.response?.status,
+      //   statusText: err.response?.statusText,
+      //   data: err.response?.data,
+      //   url: err.response?.config.url,
+      //   baseURL: err.response?.config.baseURL,
+      // };
 
-      return { isError: true, reqPayload, errorInfo };
+      // return { isError: true, reqPayload, errorInfo };
+      const data = preprocessResponse.call(
+        err,
+        {
+          schema,
+          processStrategy,
+        }
+      );
+
+      if (cbSuccess) cbSuccess(data);
+
+      return { data, isError: false };
     });
 }

@@ -87,6 +87,13 @@
       "rules": {
         "no-console": 0
       }
+    },
+    {
+      "files": ["**/src/api/**"],
+      "rules": {
+        // Due to API_JSON NOT use camelCase
+        "camelcase": 0
+      }
     }
   ]
 }

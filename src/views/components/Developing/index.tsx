@@ -5,10 +5,11 @@ import dynamic from "next/dynamic";
 // components
 import GeneralInfo from "./mains/GeneralInfo";
 import HotelSlider from "./mains/HotelSlides";
+import SubDescription from "./mains/SubDescription";
 // others
 import style from "./Developing.module.scss";
 
-const LazyHome = dynamic(() => import("../Home"));
+const LazyPriceInfo = dynamic(() => import("./mains/PriceInfo"));
 
 const Developing = () => (
   <div className={style.wrapper}>
@@ -31,17 +32,19 @@ const Developing = () => (
     <GeneralInfo />
     <div className={style.mainWrapper}>
       <HotelSlider />
+      <SubDescription />
       <div className={style.tabWrapper}>
-        <Tabs defaultActiveTab={1}>
+        <Tabs defaultActiveTab={2}>
           <TabPane id={1} name="サンプル">
             Tab 1
           </TabPane>
           <TabPane id={2} name="サンプル 2">
-            <LazyHome />
+            <LazyPriceInfo />
           </TabPane>
         </Tabs>
       </div>
     </div>
+    {/* https://www.linkpicture.com/q/GgMap.webp */}
   </div>
 );
 
