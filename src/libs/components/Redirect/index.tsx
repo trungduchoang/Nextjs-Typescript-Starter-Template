@@ -16,5 +16,6 @@ export const Redirect = ({ to }: PROPS) => {
   useEffect(() => {
     push(to);
   }, [pathname, push, to]);
+
   return null;
 };

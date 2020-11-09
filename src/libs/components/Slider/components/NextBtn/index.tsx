@@ -17,6 +17,7 @@ const NextBtn = ({ setActiveSlide, numberOfSlide }: PROPS) => {
     setActiveSlide((currentSlideIndex) => {
       let prevIndex = currentSlideIndex - 1;
       if (prevIndex === -1) prevIndex = numberOfSlide - 1;
+
       return prevIndex;
     });
   };

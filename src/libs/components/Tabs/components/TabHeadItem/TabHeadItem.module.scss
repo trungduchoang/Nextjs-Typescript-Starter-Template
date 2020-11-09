@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 120px;
+  padding: 5px 15px;
+  color: #222222;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+
+  &::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    border-bottom: solid #2b76a7 3px;
+    content: "";
+  }
+
+  &.isActive {
+    color: #333333;
+    background-color: #cccccc;
+    border-bottom-color: #cccccc;
+
+    &::after {
+      display: none;
+    }
+  }
+}

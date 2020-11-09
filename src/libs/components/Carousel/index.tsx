@@ -50,6 +50,7 @@ export const Carousel = ({ slides, slideKey = "key" }: PROPS) => {
 
   useEffect(() => {
     const slideTimer = setTimeout(goToNextSlide, AUTO_CHANGE_TIME);
+
     return () => clearTimeout(slideTimer);
   });
 

@@ -77,17 +77,24 @@
     "arrow-parens": 0,
     "no-undef": 0,
     "no-confusing-arrow": 0,
+    "newline-before-return": 1,
+    // NEED API provide unique key to use this rule "no-array-index-key"
+    "react/no-array-index-key": 0,
     // ESLint-TS Issue: https://github.com/typescript-eslint/typescript-eslint/issues/2502
     "no-use-before-define": 0
   },
   "overrides": [
     {
-      "files": [
-        "**/rename-nested-object/deepRename.ts",
-        "**/withRequestError/*.tsx"
-      ],
+      "files": ["**/rename-nested-object/**", "**/withRequestError/**"],
       "rules": {
         "no-console": 0
+      }
+    },
+    {
+      "files": ["**/src/api/**"],
+      "rules": {
+        // Due to API_JSON NOT use camelCase
+        "camelcase": 0
       }
     }
   ]

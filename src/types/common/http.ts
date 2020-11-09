@@ -1,4 +1,4 @@
-import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosError, AxiosRequestConfig } from "axios";
 
 interface ANY_OBJECT {
   [key: string]: any;
@@ -21,7 +21,7 @@ export type RESPONSE_PREPROCESSOR = {
   processStrategy?: (renamedData: ANY_OBJECT) => ANY_OBJECT;
 };
 
-export type CALLBACK_SUCCESS = (res: AxiosResponse, data: ANY_OBJECT) => void;
+export type CALLBACK_SUCCESS = (data: ANY_OBJECT) => void;
 export type CALLBACK_ERROR = (error: AxiosError) => void;
 
 export type PREPROCESSED_REQUEST_PAYLOAD = {
