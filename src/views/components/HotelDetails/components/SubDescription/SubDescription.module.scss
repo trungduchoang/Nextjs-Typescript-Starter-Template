@@ -1,0 +1,20 @@
+.wrapper {
+  .inner {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 20px;
+      margin-left: 10px;
+      color: #ded7ca;
+      font-size: 0.687rem;
+      background: #bcb3a5;
+      border-radius: 15px;
+    }
+  }
+}

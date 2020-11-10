@@ -1,0 +1,23 @@
+.wrapper {
+  width: 85px;
+
+  h2 {
+    margin: 0;
+    color: #000000;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+.isBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1082d1;
+
+  h2 {
+    color: #cdf0fa;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

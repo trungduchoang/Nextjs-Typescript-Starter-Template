@@ -31,6 +31,7 @@ module.exports = {
       "citynow.jp",
       "cutewallpaper.org",
       "s3-us-west-2.amazonaws.com",
+      "blisssaigon.com",
     ],
   },
   reactStrictMode: true,
