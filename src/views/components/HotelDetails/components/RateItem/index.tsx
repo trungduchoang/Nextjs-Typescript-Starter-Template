@@ -8,7 +8,7 @@ import style from "./RateItem.module.scss";
 
 const RateItem = () => (
   <div className={style.wrapper}>
-    <TitleDescription isBackground={false} />
+    <TitleDescription />
     <RateIcon />
   </div>
 );

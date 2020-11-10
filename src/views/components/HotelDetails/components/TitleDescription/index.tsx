@@ -7,7 +7,7 @@ import style from "./TitleDescription.module.scss";
 
 type PROPS = {
   /** type of title */
-  isBackground: boolean;
+  isBackground?: boolean;
 };
 
 const TitleDescription = ({ isBackground }: PROPS) => (

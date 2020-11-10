@@ -7,6 +7,7 @@ import ReviewArea from "./mains/ReviewArea";
 import HotelLocation from "./mains/HotelLocation";
 import DetailedInformation from "./mains/DetailedInformation";
 import GuestInformation from "./mains/GuestInformation";
+import Footer from "./mains/Footer";
 // others
 import style from "./HotelDetailsLayout.module.scss";
 
@@ -19,6 +20,7 @@ const HotelDetailsLayout = () => (
       <HotelLocation />
       <DetailedInformation />
       <GuestInformation />
+      <Footer />
     </div>
   </div>
 );

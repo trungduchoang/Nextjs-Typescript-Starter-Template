@@ -4,13 +4,14 @@ import React from "react";
 import style from "./InformationTitle.module.scss";
 
 type PROPS = {
-  title?: string;
+  title: string;
+  subTitle?: string;
 };
 
-const InformationTitle = ({ title }: PROPS) => (
+const InformationTitle = ({ title, subTitle }: PROPS) => (
   <div className={style.wrapper}>
     <h2 className={style.informationTitle}>{title}</h2>
-    <p className={style.subTitle}></p>
+    {subTitle ? <p className={style.subTitle}>{subTitle}</p> : null}
   </div>
 );
 
