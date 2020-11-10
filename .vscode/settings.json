@@ -18,5 +18,8 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
+  ],
+  "cSpell.words": [
+    "Tabbar"
   ]
 }

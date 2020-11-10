@@ -26,7 +26,13 @@ const configureWebpack = (config, { dev }) => {
 module.exports = {
   webpack: configureWebpack,
   images: {
-    domains: ["citynow.vn", "citynow.jp"],
+    domains: [
+      "citynow.vn",
+      "citynow.jp",
+      "cutewallpaper.org",
+      "s3-us-west-2.amazonaws.com",
+      "blisssaigon.com",
+    ],
   },
   reactStrictMode: true,
 };

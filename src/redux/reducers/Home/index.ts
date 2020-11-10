@@ -1,10 +1,10 @@
 // libs
 import { combineReducers } from "redux";
 // reducers
-import { pageProps } from "./pageProps";
+import { pageData } from "./pageData";
 import { specialHotelReducer } from "./specialHotelReducer";
 
 export const Home = combineReducers({
-  pageProps,
+  pageData,
   specialHotelReducer,
 });

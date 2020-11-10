@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 // libs
 import { AxiosError, AxiosResponse } from "axios";
 // types

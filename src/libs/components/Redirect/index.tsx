@@ -2,7 +2,14 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export const Redirect = ({ to }: { to: string }) => {
+type PROPS = {
+  /** address to redirect */
+  to: string;
+};
+/**
+ * Redirect
+ */
+export const Redirect = ({ to }: PROPS) => {
   const router = useRouter();
   const { pathname, push } = router;
 

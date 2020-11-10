@@ -5,24 +5,30 @@ import { BackgroundImage } from "../BackgroundImage";
 // others
 import style from "./Carousel.module.scss";
 
-type SLIDE = {
-  title?: string;
-  description?: string;
-  imgSrc: string;
-  readmoreLink?: string;
-  [key: string]: any;
-};
-
 const IMAGE_PARTS = 4;
 const AUTO_CHANGE_TIME = 4000;
 
-export const Carousel = ({
-  slides,
-  slideKey = "key",
-}: {
+type SLIDE = {
+  /** title */
+  title?: string;
+  /** description */
+  description?: string;
+  /** imgSrc */
+  imgSrc: string;
+  /** readmoreLink */
+  readmoreLink?: string;
+  [key: string]: any;
+};
+type PROPS = {
+  /** slides props */
   slides: SLIDE[];
+  /** key of slides item */
   slideKey?: string;
-}) => {
+};
+/**
+ * Carousel - Slider with full width only
+ */
+export const Carousel = ({ slides, slideKey = "key" }: PROPS) => {
   const totalSlide = slides.length;
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
