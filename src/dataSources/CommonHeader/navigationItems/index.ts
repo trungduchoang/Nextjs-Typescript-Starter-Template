@@ -2,10 +2,10 @@
 import { ROUTES } from "@/constants";
 
 export const navigationItems = [
-  { href: ROUTES.ABOUT, label: "VỀ CHÚNG TÔI" },
-  { href: "#", label: "DỊCH VỤ" },
-  { href: "#", label: "TIN TỨC" },
-  { href: "#", label: "TUYỂN DỤNG" },
-  { href: "#", label: "DU HỌC" },
-  { href: "#", label: "LIÊN HỆ" },
+  { href: ROUTES.HOTEL_DETAIL, label: "ホテルの詳細" },
+  { href: "#", label: "メニュー項目 2" },
+  { href: "#", label: "メニュー項目 3" },
+  { href: "#", label: "メニュー項目 4" },
+  { href: "#", label: "メニュー項目 5" },
+  { href: "#", label: "メニュー項目 6" },
 ];

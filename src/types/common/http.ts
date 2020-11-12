@@ -1,4 +1,4 @@
-import { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosError, AxiosRequestConfig } from "axios";
 
 interface ANY_OBJECT {
   [key: string]: any;
@@ -21,7 +21,7 @@ export type RESPONSE_PREPROCESSOR = {
   processStrategy?: (renamedData: ANY_OBJECT) => ANY_OBJECT;
 };
 
-export type CALLBACK_SUCCESS = (res: AxiosResponse, data: ANY_OBJECT) => void;
+export type CALLBACK_SUCCESS = (data: ANY_OBJECT) => void;
 export type CALLBACK_ERROR = (error: AxiosError) => void;
 
 export type PREPROCESSED_REQUEST_PAYLOAD = {
@@ -39,11 +39,18 @@ export type API_REQUEST<PAYLOAD> = {
 };
 
 export type AXIOS_CONFIG = {
+  /** request url - string / callback */
   url: string | ((payload: PREPROCESSED_REQUEST_PAYLOAD) => string);
+  /** http method */
   method: HTTP_METHOD;
+  /** request payload */
   payload?: ANY_OBJECT;
+  /** callback on success */
   cbSuccess?: CALLBACK_SUCCESS;
+  /** callback on error */
   cbError?: CALLBACK_ERROR;
+  /** preprocess API response */
   resPreprocessor: RESPONSE_PREPROCESSOR;
+  /** preprocess API request payload */
   reqPreprocessor?: (props: any) => PREPROCESSED_REQUEST_PAYLOAD;
 } & Omit<AxiosRequestConfig, "url">;

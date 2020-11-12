@@ -1,17 +1,17 @@
 // libs
 import React from "react";
+import { ShareIcon } from "@/libs/icons";
 // components
-import Logo from "./mains/Logo";
 import GlobalMenu from "./mains/GlobalMenu";
+import PageName from "./mains/PageName";
 // others
 import style from "./CommonHeader.module.scss";
 
 const CommonHeader = () => (
   <div className={style.wrapper}>
-    <div className={style.inner}>
-      <Logo />
-      <GlobalMenu />
-    </div>
+    <GlobalMenu />
+    <PageName />
+    <ShareIcon className={style.shareIcon} color="#266a99" size={18} />
   </div>
 );
 

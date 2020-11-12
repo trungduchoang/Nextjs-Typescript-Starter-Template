@@ -1,0 +1,46 @@
+// common
+@import "@/styles/common.scss";
+@import "../../variables.scss";
+
+.wrapper {
+  position: fixed;
+  top: $headerHeight;
+  left: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $generalInfoHeight;
+  padding: 0 10px;
+  background-color: #ffffff;
+  border-top: #eaeaea 2px solid;
+  border-bottom: #eaeaea 2px solid;
+
+  .stayLogo {
+    min-width: 36px;
+    height: 36px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 6px;
+
+    .time {
+      font-size: 0.7rem;
+    }
+
+    .hotelName {
+      padding-left: 9px;
+    }
+  }
+
+  .favoriteIcon {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    height: 100%;
+    color: #a6a6a6;
+  }
+}

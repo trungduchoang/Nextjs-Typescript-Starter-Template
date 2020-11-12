@@ -3,32 +3,32 @@ import ArrayEntity from "./ArrayEntity";
 import ObjEntity from "./ObjEntity";
 // types
 import { ANY_OBJECT } from "@/types/common";
+// others
+import { isNormalObj } from "@/utils";
+import { ValidationError } from "../ErrorHandler";
 
-const isNormalObj = (input: any) =>
-  input instanceof Object &&
-  !(input instanceof ObjEntity) &&
-  !(input instanceof ArrayEntity);
-
-export const deepRename = ({
-  input,
-  schema,
-}: {
+type PROPS = {
+  /** Object input */
   input: any;
+  /** output schema */
   schema: ANY_OBJECT;
-}) => {
+};
+/**
+ * deepRename - deepRename nested Object base on schema
+ */
+export const deepRename = ({ input, schema }: PROPS) => {
+  if (!input) {
+    throw new ValidationError("Input is undefined");
+  }
+
   const result: ANY_OBJECT = {};
-  Object.keys(schema).forEach((key: string) => {
+  Object.keys(schema).forEach((key) => {
     const schema$key = schema[key];
     const input$key = input[key];
 
     if (!input$key) {
-      console.error(
-        `Property ${key} does not exist in response JSON: ${JSON.stringify(
-          input,
-          null,
-          2
-        )}`
-      );
+      throw new ValidationError(`Property ${key} does not exist in: 
+      ${JSON.stringify(input, null, 2)}`);
     }
 
     if (schema$key instanceof ObjEntity) {
@@ -52,5 +52,6 @@ export const deepRename = ({
     }
     if (typeof schema$key === "string") result[schema$key] = input$key;
   });
+
   return result;
 };

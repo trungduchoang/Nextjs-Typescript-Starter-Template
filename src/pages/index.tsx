@@ -2,22 +2,24 @@
 import React from "react";
 // types
 import { GET_STATIC_PROPS } from "@/types/common";
-// components
-import HomeLayout from "@/views/components/Home";
 // api
-import { fetchHotelInfo } from "@/api/advertisement";
+import { fetchHotelDetail } from "@/api/hotel";
+// components
+import DevelopingLayout from "@/views/components/Developing";
 
-export async function getStaticProps(): Promise<GET_STATIC_PROPS> {
-  const apiResponse = await fetchHotelInfo({ payload: { limit: "1" } });
+export const getStaticProps:GET_STATIC_PROPS = async () => {
+  const apiResponse = await fetchHotelDetail({
+    payload: { hotel_id: "542711", sponsor_code: "1" },
+  });
 
   return {
     props: {
-      page: "Home",
+      page: "Developing",
       apiResponse,
     },
   };
-}
+};
 
-const Home = () => <HomeLayout />;
+const Developing = () => <DevelopingLayout />;
 
-export default Home;
+export default Developing;

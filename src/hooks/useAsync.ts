@@ -1,6 +1,11 @@
 // libs
 import { useState, useEffect, useCallback } from "react";
 
+/**
+ * useAsync
+ * @param asyncFunction
+ * @param immediate
+ */
 export const useAsync = (
   asyncFunction: Function,
   immediate: Boolean = true
@@ -17,6 +22,7 @@ export const useAsync = (
     setPending(true);
     setValue(null);
     setError(null);
+
     return asyncFunction()
       .then((response: any) => setValue(response))
       .catch((error: any) => setError(error))

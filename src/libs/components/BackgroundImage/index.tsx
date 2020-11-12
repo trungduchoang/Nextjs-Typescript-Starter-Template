@@ -1,6 +1,23 @@
 // libs
 import React, { useEffect, useState } from "react";
 
+type PROPS = {
+  /** children component */
+  children?: JSX.Element | JSX.Element[];
+  /** className */
+  className?: string;
+  /** bakcground image url/src */
+  src: string;
+  /** placeholder on image loading - can be other images / backgroundColor */
+  placeholder?:
+  | string
+  | {
+    backgroundColor: string;
+  };
+};
+/**
+ * BackgroundImage - Lazyload Image in CSS background-image
+ */
 export const BackgroundImage = ({
   src,
   placeholder = {
@@ -8,16 +25,7 @@ export const BackgroundImage = ({
   },
   children,
   className,
-}: {
-  children?: JSX.Element | JSX.Element[];
-  className?: string;
-  src: string;
-  placeholder?:
-  | string
-  | {
-    backgroundColor: string;
-  };
-}) => {
+}: PROPS) => {
   const [sourceLoaded, setSourceLoaded] = useState("");
   const backgroundStyle = () => {
     if (!sourceLoaded && typeof placeholder === "string")

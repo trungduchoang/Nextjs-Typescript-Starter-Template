@@ -5,24 +5,30 @@ import { BackgroundImage } from "../BackgroundImage";
 // others
 import style from "./Carousel.module.scss";
 
+const IMAGE_PARTS = [...Array(4).keys()];
+const AUTO_CHANGE_TIME = 4000;
+
 type SLIDE = {
+  /** title */
   title?: string;
+  /** description */
   description?: string;
+  /** imgSrc */
   imgSrc: string;
+  /** readmoreLink */
   readmoreLink?: string;
   [key: string]: any;
 };
-
-const IMAGE_PARTS = 4;
-const AUTO_CHANGE_TIME = 4000;
-
-export const Carousel = ({
-  slides,
-  slideKey = "key",
-}: {
+type PROPS = {
+  /** slides props */
   slides: SLIDE[];
+  /** key of slides item */
   slideKey?: string;
-}) => {
+};
+/**
+ * Carousel - Slider with full width only and Image-Part Effect
+ */
+export const Carousel = ({ slides, slideKey = "key" }: PROPS) => {
   const totalSlide = slides.length;
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState(-1);
@@ -44,6 +50,7 @@ export const Carousel = ({
 
   useEffect(() => {
     const slideTimer = setTimeout(goToNextSlide, AUTO_CHANGE_TIME);
+
     return () => clearTimeout(slideTimer);
   });
 
@@ -77,7 +84,7 @@ export const Carousel = ({
               )}
             </div>
             <div className={style.bgPartContainer}>
-              {[...Array(IMAGE_PARTS).keys()].map((id) => (
+              {IMAGE_PARTS.map((id) => (
                 <div className={style.bgPart} key={id}>
                   <BackgroundImage
                     src={slide.imgSrc}

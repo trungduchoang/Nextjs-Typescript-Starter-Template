@@ -1,0 +1,29 @@
+$equipColor: #0671c9;
+
+.wrapper {
+  .title {
+    padding: 10px 20px;
+    color: $equipColor;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: #ffffff;
+  }
+
+  .equips {
+    padding: 10px 10px;
+    background-color: #e8e8e8;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+
+    .item {
+      display: inline-block;
+      margin: 2px;
+      padding: 2px;
+      color: $equipColor;
+      font-size: 0.7rem;
+      background-color: #ffffff;
+      border: 2px solid $equipColor;
+      border-radius: 6px;
+    }
+  }
+}

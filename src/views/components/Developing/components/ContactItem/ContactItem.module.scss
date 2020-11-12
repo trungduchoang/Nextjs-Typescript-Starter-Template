@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 2px solid #f0f0f0;
+
+  .phoneNumber {
+    padding-left: 65px;
+    color: #666666;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .chevronIcon {
+    position: absolute;
+    right: 0;
+  }
+}

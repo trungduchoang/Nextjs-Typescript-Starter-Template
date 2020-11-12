@@ -1,4 +1,3 @@
-require("dotenv").config();
 const path = require("path");
 
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
@@ -26,7 +25,18 @@ const configureWebpack = (config, { dev }) => {
 module.exports = {
   webpack: configureWebpack,
   images: {
-    domains: ["citynow.vn", "citynow.jp"],
+    domains: [
+      "citynow.vn",
+      "www.linkpicture.com",
+      "citynow.jp",
+      "cutewallpaper.org",
+      "s3-us-west-2.amazonaws.com",
+      "gcpdev.happyhotel.jp",
+      "happyhotel.jp",
+    ],
   },
   reactStrictMode: true,
+  env: {
+    BASE_API: process.env.BASE_API,
+  },
 };

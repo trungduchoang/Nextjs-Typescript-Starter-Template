@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5px 20px;
+  background-color: #ffffff;
+  border-top: #eaeaea 2px solid;
+  border-bottom: 2px solid #f0f0f0;
+  border-bottom: #eaeaea 2px solid;
+
+  .addressWrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 4px 16px;
+
+    .addressInner {
+      font-size: 0.6875rem;
+
+      .address {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .heartDes {
+    font-size: 0.5rem;
+    text-align: center;
+  }
+
+  .chevronIcon {
+    position: absolute;
+    right: 0;
+  }
+}

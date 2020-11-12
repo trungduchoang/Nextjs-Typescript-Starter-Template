@@ -10,7 +10,8 @@ import { useInitStore } from "@/configs/Redux";
 import { interceptRequest } from "@/configs/Axios";
 // others
 import { generateInitialState } from "@/utils";
-import "@/styles/global.css";
+import "swiper/swiper.scss";
+import "@/styles/classless.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const initialState = generateInitialState.call(pageProps);

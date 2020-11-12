@@ -1,16 +1,25 @@
 // libs
 import React from "react";
+import { MenuIcon } from "@/libs/icons";
+// types
+import { ONCLICK } from "@/types/common";
 // others
 import style from "./NavToggle.module.scss";
 
-const NavToggle = ({ onClick }: { onClick: (event: any) => void }) => (
-  <div className={style.wrapper} onClick={onClick}>
-    <div className={style.toggleBtn}>
-      <div className={style.iconBar}></div>
-      <div className={style.iconBar}></div>
-      <div className={style.iconBar}></div>
-    </div>
-  </div>
+type PROPS = {
+  /** onClick event */
+  onClick: ONCLICK;
+};
+/**
+ * NavToggle
+ */
+const NavToggle = ({ onClick }: PROPS) => (
+  <MenuIcon
+    className={style.toggleBtn}
+    color="#666666"
+    size={25}
+    onClick={onClick}
+  />
 );
 
 export default NavToggle;

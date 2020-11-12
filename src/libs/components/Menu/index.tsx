@@ -6,7 +6,16 @@ import { NAV_ITEM } from "@/types/components/NavBar";
 import NavBar from "./mains/NavBar";
 import NavToggle from "./mains/NavToggle";
 
-export const Menu = ({ dataSource }: { dataSource: NAV_ITEM[] }) => {
+type PROPS = {
+  /** menuItems props */
+  dataSource: NAV_ITEM[];
+  /** position of Dropdown Menu */
+  position?: "right" | "left";
+};
+/**
+ * Menu
+ */
+export const Menu = ({ dataSource, position = "right" }: PROPS) => {
   const [visible, setVisible] = useState(false);
 
   const toggleMenuVisible = () => {
@@ -19,6 +28,7 @@ export const Menu = ({ dataSource }: { dataSource: NAV_ITEM[] }) => {
       <NavBar
         menuItems={dataSource}
         isVisibled={visible}
+        position={position}
         toggleMenuVisible={toggleMenuVisible}
       />
     </div>

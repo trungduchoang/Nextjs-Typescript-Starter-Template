@@ -34,5 +34,6 @@ const initializeStore = (preloadedState: ANY_OBJECT) => {
 
 export const useInitStore = (initialState: ANY_OBJECT) => {
   const store = useMemo(() => initializeStore(initialState), [initialState]);
+
   return store;
 };
